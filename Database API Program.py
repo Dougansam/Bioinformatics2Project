@@ -90,22 +90,22 @@ single data type is requested for output, a single list containing
 a single string will be returned*:
 
 db_request(1,"AY177663",4)
-db_result = (["desmoglein 4 preproprotein"],["AY177663"])
+db_result = [["desmoglein 4 preproprotein"],["AY177663"]]
 
 Example 2.
 Where a non-unique string is entered,and a single data type is
 requested, a single list of one or several strings will be returned*:
 
 db_request(3,"SSCA",3)
-db_result = (["SSCA1","SCCA2"],["U19568","U19576"])
+db_result = [["SSCA1","SCCA2"],["U19568","U19576"]]
 
 Example 3.
 Where a browse request is made, and a single data type is requested, a
 single list of several or many strings will be returned*:
 
 db_request(2,"B",2)
-db_result = (["18q12","18p11.32","18q21.1","18q21.3","18q21.3"],
-["AY177663","D00596","U11424","U19568","U19576"])
+db_result = [["18q12","18p11.32","18q21.1","18q21.3","18q21.3"],
+["AY177663","D00596","U11424","U19568","U19576"]]
 
 Example 4.
 Where a unique string is entered, and multiple data types are
@@ -113,8 +113,8 @@ requested, a nested list will be returned, with each inner list
 containing a single string:
 
 db_request(4,"desmoglein 4 preproprotein",7)
-db_result = ([["AY177663"],["18q12"],["DSG4"],["desmoglein 4
-preproprotein"]])
+db_result = [["AY177663"],["18q12"],["DSG4"],["desmoglein 4
+preproprotein"]]
 
 Example 5.
 Where a non-unique string is entered, and multiple data types are
@@ -122,14 +122,14 @@ requested, a nested list will be returned, with each inner list
 containing one or several strings:
 
 db_request(2,"18q21",8)
-db_result = ([["U11424","U19568","U19576"],["18q21.1","18q21.3",
+db_result = [["U11424","U19568","U19576"],["18q21.1","18q21.3",
 "18q21.3"],["pseudoTPMT","SSCA1","SCCA2"],["thiopurine
 methyltransferase processed pseudogene","squamous cell carcinoma
 antigen","squamous cell carcinoma antigen"],["99..987,6619..7050",
 "20..125, 300..490","99..587,619..950"],["cacccacatataacccaatgtatttatat
 attctaataataataaagaacctttgtcgtgtcgatcacttacctacccaggactcacaccaggactcata
 cactta","catacacatacacct......actgattcttttatataacatgtattt","tatatccagga
-tcatattttgcctgaacctttgtcgatcacttacctacacattacatatacataaactgattgcctat"]])
+tcatattttgcctgaacctttgtcgatcacttacctacacattacatatacataaactgattgcctat"]]
 
 Example 6.
 Where a browse request is made, and multiple data types are requested,
@@ -137,13 +137,13 @@ a nested list will be returned, with each inner list containing several
 or many strings*:
 
 db_request(5,"B",6)
-db_result = ([["cacccacatataacccaatgtatttatatatccaggactcatattttgcctatta
+db_result = [[["cacccacatataacccaatgtatttatatatccaggactcatattttgcctatta
 attctaataataataaagaacctttgtcgtgtcgatcacttacctacccaggactcacaccaggactcata
 cactta","catacacatacacct......actgattcttttatataacatgtattt","tatatccagga
 tcatattttgcctgaacctttgtcgatcacttacctacacattacatatacataaactgattgcctat"],
 ["99..987,6619..7050", "20..125, 300..490","99..587,619..950","11..183,
 8360..8395,9912..10043,11591..11746", "159..987,1200..5079","360..8395,
-9912..10043"]],["AY177663","D00596","U11424","U19568","U19576"])
+9912..10043"]],["AY177663","D00596","U11424","U19568","U19576"]]
 
 Notes on usage and further examples
 -----------------------------------
@@ -161,8 +161,8 @@ db_query function as follows:
         to options 1-4*, 6* or 7*:
 
         db_request(3,"SCCA",4)
-        db_result = (["squamous cell carcinoma antigen","squamous cell
-        carcinoma antigen"],["U19568","U19576"])
+        db_result = [["squamous cell carcinoma antigen","squamous cell
+        carcinoma antigen"],["U19568","U19576"]]
         
     Example 8.   
     (ii)A follow-up search where a unique db_query (obtained during the
@@ -170,13 +170,13 @@ db_query function as follows:
         type request;
 
         db_request(1,"U19568",8)   
-        db_result = ([["U19576"],["18q21.3"],["SCCA1"],["squamous cell
+        db_result = [["U19576"],["18q21.3"],["SCCA1"],["squamous cell
         carcinoma antigen"],["65..98,103..540"],["acacattacatatacataaa
         tcttttatacacatacacatataacccaatgtatttatatatccaggactcatattttgcct
         attagaataataatatctaataaagtgaaccttctgtatttcacatttgttgccaaaataag
         gattctccacatagtcaattcattgttaaggttcttccagaaaaattctccttgaggaaaaa
         tgtccaaaataagatgaatcacttaatacggaatcattagagtatgggtgaatgaagagaaa
-        aataataatatctaataagc"]])
+        aataataatatctaataagc"]]
        
 *together with a separate list containing appropriate accession no/s.)
 
