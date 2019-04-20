@@ -28,7 +28,7 @@ arguments, the following protocol is used:
     4 = protein product name*
     
     5 = complete DNA sequence*
-    6 = exon positions in complete DNA sequence*
+    6 = exon positions in the sequence, and start codon position*
 
     7 = 'Summary list' consisting of data types 1-4    
     8 = 'Full detail list' consisting of data types 1-6
@@ -45,7 +45,7 @@ The db_input argument indicates which data category should be searched
 by a given search term, "db_query". When used with the search term
 query, db_input can only take values 1-4.
 
-In addition, db_input can be used to indicate particular categories
+Alternatively, db_input can be used to indicate particular categories
 of data selected for browsing, where db_input can take values of 1-8.
 
 2. Database query
@@ -58,19 +58,19 @@ purposes:
         term entered;
 
    (ii) The db_query string can alternatively signal for browsing of
-        the data categories indicated by the db_input. In this case the
+        the data category indicated by the db_input. In this case the
         BL submits 'B' as the string argument, which enables browsing.
 
 3. Database output
 ------------------
 The db_output is a flexible argument which selects one or more data
-categories to be returned to the BL for one or more records.
+types to be returned to the BL for one or more records.
 
 In particular, it allows expanded functionality for string searches,
-beyond the single data category stipulated by the search_by argument.
+beyond the single data type stipulated by the search_by argument.
 The BL submits a second integer argument which may be selected from
 the full range of values shown above i.e. 1-8. This allows multiple
-categories to be selected for return during a string-based search. It
+data types to be selected for return during a string-based search. It
 also allows the data category which is returned to be different from
 the data category used to carry out the search itself.
 
@@ -84,66 +84,50 @@ in the BL before passing to the user.
 
 Data return and examples
 ------------------------
-Example 1.
-Where a unique string is entered to search a type of data, and a
-single data type is requested for output, a single list containing
-a single string will be returned*:
+Results are returned as nested strings, as illustrated by the
+examples below. Where a field is not found for a particular data type,
+'NF' will be reported:
 
-db_request(1,"AY177663",4)
-db_result = [["desmoglein 4 preproprotein"],["AY177663"]]
+Example 1: Unique string search; single data type:
 
-Example 2.
-Where a non-unique string is entered,and a single data type is
-requested, a single list of one or several strings will be returned*:
+db_request(1,'AY177663',4)
+db_result = [['desmoglein 4 preproprotein'], ['AY177663']]
 
-db_request(3,"SSCA",3)
-db_result = [["SSCA1","SCCA2"],["U19568","U19576"]]
+Example 2: Non-unique string search; single data type:
 
-Example 3.
-Where a browse request is made, and a single data type is requested, a
-single list of several or many strings will be returned*:
+db_request(3,'SSCA',3)
+db_result = [['SSCA2', 'SSCA', 'pseudoSSCA'], ['AF485254', 'U49845',
+'AF165912']]
 
-db_request(2,"B",2)
-db_result = [["18q12","18p11.32","18q21.1","18q21.3","18q21.3"],
-["AY177663","D00596","U11424","U19568","U19576"]]
+Example 3: Browse; single data type:
 
-Example 4.
-Where a unique string is entered, and multiple data types are
-requested, a nested list will be returned, with each inner list
-containing a single string:
+db_request(2,'B',2)
+db_result = [[['18q24.3', '18q24', 'NF', '18q11.2', 'q12.1', '18q11'],
+['AF485254', 'U49845', 'AF165912', 'U55184', 'U19576', 'U55184']]]
 
-db_request(4,"desmoglein 4 preproprotein",7)
-db_result = [["AY177663"],["18q12"],["DSG4"],["desmoglein 4
-preproprotein"]]
+Example 4: Unique string search; multiple data types:
 
-Example 5.
-Where a non-unique string is entered, and multiple data types are
-requested, a nested list will be returned, with each inner list
-containing one or several strings:
+db_request(4,'desmoglein 4 preproprotein',7)
+db_result = [['AY177663'], ['18q24'], ['DSG4'], ['desmoglein 4
+preproprotein']]
 
-db_request(2,"18q21",8)
-db_result = [["U11424","U19568","U19576"],["18q21.1","18q21.3",
-"18q21.3"],["pseudoTPMT","SSCA1","SCCA2"],["thiopurine
-methyltransferase processed pseudogene","squamous cell carcinoma
-antigen","squamous cell carcinoma antigen"],["99..987,6619..7050",
-"20..125, 300..490","99..587,619..950"],["cacccacatataacccaatgtatttatat
-attctaataataataaagaacctttgtcgtgtcgatcacttacctacccaggactcacaccaggactcata
-cactta","catacacatacacct......actgattcttttatataacatgtattt","tatatccagga
-tcatattttgcctgaacctttgtcgatcacttacctacacattacatatacataaactgattgcctat"]]
+Example 5: Non-unique string; multiple data types:
 
-Example 6.
-Where a browse request is made, and multiple data types are requested,
-a nested list will be returned, with each inner list containing several
-or many strings*:
+db_request(2,'18q24.1',8)
+
+[['D00596', 'U11424'], ['18q24.1', '18q24.1'], ['TPMT', 'pseudoTPMT'],
+['thiopurine methyltransferase processed', 'pseudo-thiopurine methyltrans
+ferase'], ['cacccacat...ataacccaatca', 'tcttagaatat...atatatgacaac'],
+['99..987, 6619..7050', '20..125, 300..490'], ['start=1', 'start=3']]
+
+Example 6: Browse request; multiple data types:
 
 db_request(5,"B",6)
-db_result = [[["cacccacatataacccaatgtatttatatatccaggactcatattttgcctatta
-attctaataataataaagaacctttgtcgtgtcgatcacttacctacccaggactcacaccaggactcata
-cactta","catacacatacacct......actgattcttttatataacatgtattt","tatatccagga
-tcatattttgcctgaacctttgtcgatcacttacctacacattacatatacataaactgattgcctat"],
-["99..987,6619..7050", "20..125, 300..490","99..587,619..950","11..183,
-8360..8395,9912..10043,11591..11746", "159..987,1200..5079","360..8395,
-9912..10043"]],["AY177663","D00596","U11424","U19568","U19576"]]
+db_result = [[['cacccacat...tctcacacc', 'tcttagaag...ttgactaaac',
+'aggactcat...cacatataac', 'tatatccagg...tgaaccttt'],['AF485254', 'U49845',
+'AF165912', 'AJ001716']], [['1799..5187,6619..7050','20..125, 300..490',
+'NF', '111..183,8360..8395,9912..10043'], ['start=2', 'start=1',
+'start=3', 'start=1'], ['AF485254', 'U49845', 'AF165912', 'AJ001716']]]
 
 Notes on usage and further examples
 -----------------------------------
@@ -156,29 +140,26 @@ Genbank accession code - it is recommended that a two step search
 procedure is used. This would consist of two separate calls to the
 db_query function as follows:
 
-    Example 7.
-    (i) A preliminary search where the db_return argument is confined
-        to options 1-4*, 6* or 7*:
+Example 7: Prelininary, non-unique string search; single data type:
 
-        db_request(3,"SCCA",4)
-        db_result = [["squamous cell carcinoma antigen","squamous cell
-        carcinoma antigen"],["U19568","U19576"]]
+    (i) A preliminary search where the db_return argument is confined
+        to options 1-4, 6 or 7:
+
+        db_request(3,'DSG',4)
+        db_result = [['desmoglein type 1', 'desmoglein 4 preproprotein'],
+        ['AF485254', 'U49845']]
         
-    Example 8.   
-    (ii)A follow-up search where a unique db_query (obtained during the
+Example 8: Follow-up, unique string search; multiple data types:
+
+   (ii) A follow-up search where a unique db_query (obtained during the
         initial search) can be submitted, together with a multiple data
         type request;
 
-        db_request(1,"U19568",8)   
-        db_result = [["U19576"],["18q21.3"],["SCCA1"],["squamous cell
-        carcinoma antigen"],["65..98,103..540"],["acacattacatatacataaa
-        tcttttatacacatacacatataacccaatgtatttatatatccaggactcatattttgcct
-        attagaataataatatctaataaagtgaaccttctgtatttcacatttgttgccaaaataag
-        gattctccacatagtcaattcattgttaaggttcttccagaaaaattctccttgaggaaaaa
-        tgtccaaaataagatgaatcacttaatacggaatcattagagtatgggtgaatgaagagaaa
-        aataataatatctaataagc"]]
-       
-*together with a separate list containing appropriate accession no/s.)
+        db_request(1,'AF485254',8)   
+        db_result = [['AF485254'], ['18q11.2'], ['DSG1'], ['desmoglein type 1'],
+        ['cacccacatatgtcgtgtcgatcacccctactacataggatggatacgataacgatccaccac'],
+        ['99..987,6619..7050', '20..125, 300..490'], ['start=3']]
+
 
 '''
     
@@ -196,14 +177,17 @@ browse (1-8): "))
 db_query = str(input("Enter a search term string for the \
 selected category, or enter 'B' to browse a category: "))
 
-if db_query != 'B':
+if db_query != 'B' or 'b':
     if db_input < 1 or db_input > 4:
-        print("String search data category error")
+        print("String search: data category error")
 else:
     if db_input < 1 or db_input > 8:
-        print("Browse data category error")
+        print("Browse: data category error")
         
 db_output = int(input("Enter output data category (1-8): "))
+
+if db_output < 1 or db_output > 8:
+        print("Output data category error")
 
 db_result = db_request(db_input, db_query, db_output)
 
