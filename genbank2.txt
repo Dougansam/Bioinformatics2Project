@@ -1,0 +1,559 @@
+LOCUS       SCU49845     5028 bp    DNA             PLN       21-JUN-1999
+DEFINITION  Saccharomyces cerevisiae TCP1-beta gene, partial cds, and Axl2p
+            (AXL2) and Rev7p (REV7) genes, complete cds.
+ACCESSION   U49845
+VERSION     U49845.1  GI:1293613
+KEYWORDS    .
+SOURCE      Saccharomyces cerevisiae (baker's yeast)
+  ORGANISM  Saccharomyces cerevisiae
+            Eukaryota; Fungi; Ascomycota; Saccharomycotina; Saccharomycetes;
+            Saccharomycetales; Saccharomycetaceae; Saccharomyces.
+REFERENCE   1  (bases 1 to 5028)
+  AUTHORS   Torpey,L.E., Gibbs,P.E., Nelson,J. and Lawrence,C.W.
+  TITLE     Cloning and sequence of REV7, a gene whose function is required for
+            DNA damage-induced mutagenesis in Saccharomyces cerevisiae
+  JOURNAL   Yeast 10 (11), 1503-1509 (1994)
+  PUBMED    7871890
+REFERENCE   2  (bases 1 to 5028)
+  AUTHORS   Roemer,T., Madden,K., Chang,J. and Snyder,M.
+  TITLE     Selection of axial growth sites in yeast requires Axl2p, a novel
+            plasma membrane glycoprotein
+  JOURNAL   Genes Dev. 10 (7), 777-793 (1996)
+  PUBMED    8846915
+REFERENCE   3  (bases 1 to 5028)
+  AUTHORS   Roemer,T.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (22-FEB-1996) Terry Roemer, Biology, Yale University, New
+            Haven, CT, USA
+FEATURES             Location/Qualifiers
+     source          1..5028
+                     /organism="Saccharomyces cerevisiae"
+                     /db_xref="taxon:4932"
+                     /chromosome="IX"
+                     /map="9"
+
+
+
+     CDS             <1..206
+                     /codon_start=3
+                     /product="TCP1-beta"
+                     /protein_id="AAA98665.1"
+                     /db_xref="GI:1293614"
+                     /translation="SSIYNGISTSGLDLNNGTIADMRQLGIVESYKLKRAVVSSASEA
+                     AEVLLRVDNIIRARPRTANRQHM"
+     gene            687..3158
+                     /gene="AXL2"
+
+
+
+
+
+
+     CDS             687..3158
+                     /gene="AXL2"
+                     /note="plasma membrane glycoprotein"
+                     /codon_start=1
+                     /function="required for axial budding pattern of S.
+                     cerevisiae"
+                     /product="Axl2p"
+                     /protein_id="AAA98666.1"
+                     /db_xref="GI:1293615"
+                     /translation="MTQLQISLLLTATISLLHLVVATPYEAYPIGKQYPPVARVNESF
+                     
+                     
+HRNRHLQNIQDSQSGKNGITPTTMSTSSSDDFVPVKDGENFCWVHSMEPDRRPSKKRL
+                     VDFSNKSNVNVGQVKDIHGRIPEML"
+     gene            complement(3300..4037)
+                     /gene="REV7"
+     CDS             complement(3300..4037)
+                     /gene="REV7"
+                     /codon_start=1
+                     /product="Rev7p"
+                     /protein_id="AAA98667.1"
+                     /db_xref="GI:1293616"
+                     					/translation="MNRWVEKWLRVYLKCYINLILFYRNVYPPQSFDYTTYQSFNLRVDSLEEKAEIERDSNWVKCQEDENLPDNNGFQPPKIKLTSLVGSDVGPLIIHQFSEKISGDDKILNGVYSQYEEGESIFGSLF"
+ORIGIN
+        1 gatcctccat atacaacggt atctccacct caggtttaga tctcaacaac ggaaccattg
+       61 ccgacatgag acagttaggt atcgtcgaga gttacaagct aaaacgagca gtagtcagct
+     2881 caccatcacc atataacgta acgaagcatc gtaaccgcca cttacaaaat attcaagact
+     4921 ttttcagtgt tagattgctc taattctttg agctgttctc tcagctcctc atatttttct
+     4981 tgccatgact cagattctaa ttttaagcta ttcaatttct ctttgatc
+//
+
+
+LOCUS       AY177663               37140 bp    DNA     linear   PRI 28-MAR-2003
+DEFINITION  Homo sapiens desmoglein 4 preproprotein (DSG4) gene, complete cds.
+ACCESSION   AY177663
+VERSION     AY177663.1  GI:29335953
+KEYWORDS    .
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 37140)
+  AUTHORS   Whittock,N.V. and Bower,C.
+  TITLE     Genetic evidence for a novel human desmosomal cadherin, desmoglein
+            4
+  JOURNAL   J. Invest. Dermatol. 120 (4), 523-530 (2003)
+   PUBMED   12648213
+REFERENCE   2  (bases 1 to 37140)
+  AUTHORS   Whittock,N.V.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (10-NOV-2002) Center for Molecular Genetics, Institute of
+            Biomedical and Clinical Science, Peninsula Medical School, Old
+            Pathology Building, Barrack Road, Exeter EX2 5DW, England
+FEATURES             Location/Qualifiers
+     source          1..37140
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="18"
+                     /map="18q12"
+     gene            1..37140
+                     /gene="DSG4"
+     mRNA            join(1..183,8360..8395,9912..10043,11591..11746,
+                     12098..12242,13880..14046,14302..14436,15379..15564,
+                     22496..22767,24105..24244,26640..26858,29301..29597,
+                     32676..32815,32969..33032,34455..34672,36052..37140)
+                     /gene="DSG4"
+                     /product="desmoglein 4 preproprotein"
+     exon            1..183
+                     /gene="DSG4"
+                     /number=1
+     5'UTR           1..135
+                     /gene="DSG4"
+     CDS             join(136..183,8360..8395,9912..10043,11591..11746,
+                     12098..12242,13880..14046,14302..14436,15379..15564,
+                     22496..22767,24105..24244,26640..26858,29301..29597,
+                     32676..32815,32969..33032,34455..34672,36052..36819)
+                     /gene="DSG4"
+                     /note="desmosomal cadherin"
+                     /codon_start=1
+                     /product="desmoglein 4 preproprotein"
+                     /protein_id="AAO47077.1"
+                     /db_xref="GI:29335954"
+                     /translation="MDWLFFRNICLLIILMVVMEVNSEFIVEVKEFDIENGTTKWQTV
+                     RRQKREWIKFAAACREGEDNSKRNPIAKIRSDCESNQKITYRISGVGIDRPPYGVFTI
+                     GVPDMSNSSTTEGCMGPVMSGNILVGPEIQVMQMMSPDLPIGQTVGSTSPMTSRHRVT
+                     RYSNIHYTQQ"
+     exon            8360..8395
+                     /gene="DSG4"
+                     /number=2
+     exon            9912..10043
+                     /gene="DSG4"
+                     /number=3
+     exon            11591..11746
+                     /gene="DSG4"
+                     /number=4
+     exon            12098..12242
+                     /gene="DSG4"
+                     /number=5
+     exon            36052..37140
+                     /gene="DSG4"
+                     /number=16
+     3'UTR           36820..37140
+                     /gene="DSG4"
+ORIGIN      
+        1 caccacagtt atcacccatg ccctcctaaa agggtgtctc aaagcatatc tttctgtaga
+       61 gcagaattcg gaactgagaa gacgagggct caaattgaat ctcacaggat ttgcgtgcaa
+      121 gagaaaccca aaggaatgga ttggctcttc ttcagaaaca tttgcctttt gatcattcta
+      181 atggtaagta gaatttaaag aggtgggaag gaa
+//
+
+LOCUS       HUMTS1                 18596 bp    DNA     linear   PRI 07-DEC-2007
+DEFINITION  Homo sapiens gene for thymidylate synthase, complete cds.
+ACCESSION   D00596
+VERSION     D00596.1  GI:220135
+KEYWORDS    .
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 18596)
+  AUTHORS   Kaneda,S., Nalbantoglu,J., Takeishi,K., Shimizu,K., Gotoh,O.,
+            Seno,T. and Ayusawa,D.
+  TITLE     Structural and functional analysis of the human thymidylate
+            synthase gene
+  JOURNAL   J. Biol. Chem. 265 (33), 20277-20284 (1990)
+   PUBMED   2243092
+COMMENT     These data kindly submitted in computer readable form by: Sumiko
+            Kaneda
+            National Institute of Genetics
+            1111 Yata
+            Mishima 411
+            Japan.
+FEATURES             Location/Qualifiers
+     source          1..18596
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="18"
+                     /map="18p11.32"
+                     /clone="lambdaHTS-1 and lambdaHTS-3"
+     repeat_region   1..148
+                     /rpt_family="Alu"
+     repeat_region   202..477
+                     /rpt_family="Alu"
+     prim_transcript 822..16246
+                     /note="thymidylate synthase mRNA and introns"
+     prim_transcript 824..16246
+                     /note="thymidylate synthase mRNA and introns"
+     prim_transcript 828..16246
+                     /note="thymidylate synthase mRNA and introns"
+     prim_transcript 841..16246
+                     /note="thymidylate synthase mRNA and introns"
+     repeat_region   862..889
+                     /rpt_type=inverted
+     repeat_region   904..993
+                     /note="triple tandem repeats"
+                     /rpt_type=tandem
+     CDS             join(1001..1205,2895..2968,5396..5570,11843..11944,
+                     13449..13624,14133..14204,15613..15750)
+                     /EC_number="2.1.1.45"
+                     /codon_start=1
+                     /product="thymidylate synthase"
+                     /protein_id="BAA00472.1"
+                     /db_xref="GI:220136"
+                     /translation="MPVAGSELPRRPLPPAAQERDAEPRPPHGELQYLGQIQHILRCG
+                     VRKDDRTGTGTLSVFGMQARYSLRDEFPLLTTKRVFWKGVLEELLWFIKGSTNAKELS
+                     SKGVKIWDANGSRDFLDSLGFSTREEGDLGPVYGFQWRHFGAEYRDMESDYSGQGVDQ
+                     LQRVIDTIKTNPDDRRIIMCAWNPRDLPLMALPPCHALCQFYVVNSELSCQLYQRSGD
+                     MGLGVPFNIASYALLTYMIAHITGLKPGDFIHTLGDAHIYLNHIEPLKIQLQREPRPF
+                     PKLRILRKVEKIDDFKAEDFQIEGYNPHPTIKMEMAV"
+     exon            <1001..1205
+                     /number=1
+     intron          1206..2894
+                     /number=1
+     protein_bind    1660..1665
+                     /bound_moiety="Sp1"
+     protein_bind    1890..1895
+                     /bound_moiety="Sp1"
+     protein_bind    1895..1900
+                     /bound_moiety="Sp1"
+     exon            2895..2968
+                     /number=2
+     intron          2969..5395
+                     /number=2
+     repeat_region   3049..3347
+                     /rpt_family="Alu"
+     repeat_region   4953..5245
+                     /rpt_family="Alu"
+     exon            5396..5570
+                     /number=3
+     intron          5571..11842
+                     /number=3
+     repeat_region   5768..9405
+                     /note="L1 sequence"
+     repeat_region   10125..10389
+                     /note="reiterated motif of GGA/TGAT"
+     exon            11843..11944
+                     /number=4
+     intron          11945..13448
+                     /number=4
+     repeat_region   12135..12397
+                     /rpt_family="Alu"
+     repeat_region   12567..12743
+                     /rpt_family="Alu"
+     repeat_region   12807..13084
+                     /rpt_family="Alu"
+     exon            13449..13624
+                     /number=5
+     intron          13625..14132
+                     /number=5
+     repeat_region   13875..14010
+                     /rpt_family="Alu"
+     exon            14133..14204
+                     /number=6
+     intron          14205..15612
+                     /number=6
+     repeat_region   14531..14832
+                     /rpt_family="Alu"
+     exon            15613..>15750
+                     /number=7
+     polyA_signal    15934..15939
+     polyA_signal    16228..16233
+     repeat_region   17262..17553
+                     /rpt_family="Alu"
+ORIGIN      
+        1 cctgtagtcc cagctacgcg agaggctgag gcagcagaat tacttgaacc caggaggcgg
+       61 aggttgcagt gagccgagat cgcgccactg cactccagcc tgggtgagag agcgagactc
+      121 tgtctcaaaa aaaaaaaaaa aagaccgcca gggctcaaac aaaaaacctc ggaaaagccc
+      181 tggcggtctt tttttttttt tttttttttt ttttttggga cagtcttgct ctgtcgccca
+      241 ggctggagta caatggtcgg atcttggctc actgcaacct ctgcctccca ggttcaagca
+//
+
+LOCUS       HSU11424                1944 bp    DNA     linear   PRI 16-OCT-2008
+DEFINITION  Homo sapiens thiopurine methyltransferase processed pseudogene
+            (pseudoTPMT) gene, complete cds.
+ACCESSION   U11424
+VERSION     U11424.1  GI:805081
+KEYWORDS    .
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 1944)
+  AUTHORS   Lee,D., Szumlanski,C., Houtman,J., Honchel,R., Rojas,K.,
+            Overhauser,J., Wieben,E.D. and Weinshilboum,R.M.
+  TITLE     Thiopurine methyltransferase pharmacogenetics. Cloning of human
+            liver cDNA and a processed pseudogene on human chromosome 18q21.1
+  JOURNAL   Drug Metab. Dispos. 23 (3), 398-405 (1995)
+   PUBMED   7628307
+REFERENCE   2  (bases 1 to 1944)
+  AUTHORS   Szumlanski,C.L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (27-JUN-1994) Carol L. Szumlanski, Pharmacology, Mayo
+            Medical School/Mayo Clinic/Mayo Foundation, 200 First St. SW,
+            Rochester, MN 55905, USA
+FEATURES             Location/Qualifiers
+     source          1..1944
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="18"
+                     /map="18q21.1"
+                     /cell_type="lymphocyte"
+                     /clone_lib="lymphocyte genomic library in the lambda dash
+                     vector, Stratagene"
+     repeat_region   64..73
+                     /note="5' direct repeat"
+                     /rpt_type=direct
+     gene            168..908
+                     /gene="pseudoTPMT"
+     CDS             168..908
+                     /gene="pseudoTPMT"
+                     /EC_number="2.1.1.67"
+                     /function="S-methylation"
+                     /codon_start=1
+                     /product="thiopurine methyltransferase processed
+                     pseudogene"
+                     /protein_id="AAC50129.1"
+                     /db_xref="GI:805082"
+                     /translation="MDGTRTSLDIEEYSNTEVQKNQVLTLEEWQDKWVNGNTAFHQEQ
+                     GPQLLKKHLDTFLKGESGLRVFFPLCRKEVEMKWFADRGHSVVGVEISELGIREFFTE
+                     QNLSYSEEPITEIPGTKAFKSSSGNISSYCCSIFDLPRTNIGTFDMIWDRGALVAINP
+                     GDRKCYADIMLSLLGKKFQYLLCVFLTIQLNIQVHHFMFHMLKLKGCLVKYAIYIVLR
+                     RLMLLKNDIKIGGLTIFLKSYIYLQKSK"
+     polyA_signal    1828..1833
+     polyA_site      1849
+     repeat_region   1880..1889
+                     /note="3' direct repeat"
+                     /rpt_type=direct
+ORIGIN      
+        1 taaatcagat ccctgaggac ctccacttga tatcatcttt agtcccatta atgcccttaa
+       61 aaacaatttg cttgggatga cactagtggc ggaggcaatg gccagcaacc ctctgtaagc
+      121 gaggcgtgga agacatatgc ttgtgagaaa aaggtgtcta tgaaactatg gatggtacaa
+      181 gaacttcact tgacattgaa gagtactcca atactgaggt acagaaaaac caagtactaa
+//
+
+LOCUS       HSSCCA1S12              1477 bp    DNA     linear   PRI 31-JAN-1996
+DEFINITION  Human squamous cell carcinoma antigen (SCCA1) gene, exon 8 and
+            complete cds.
+ACCESSION   U19568
+VERSION     U19568.1  GI:1172085
+KEYWORDS    .
+SEGMENT     12 of 12
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 1477)
+  AUTHORS   Schneider,S.S., Schick,C., Fish,K.E., Miller,E., Pena,J.C.,
+            Treter,S.D., Hui,S.M. and Silverman,G.A.
+  TITLE     A serine proteinase inhibitor locus at 18q21.3 contains a tandem
+            duplication of the human squamous cell carcinoma antigen gene
+  JOURNAL   Proc. Natl. Acad. Sci. U.S.A. 92 (8), 3147-3151 (1995)
+   PUBMED   7724531
+REFERENCE   2  (bases 1 to 1477)
+  AUTHORS   Silverman,G.A.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (06-JAN-1995) Gary A. Silverman, Department of
+            Pediatrics, Harvard Medical School, Children's Hospital, 300
+            Longwood Avenue, Enders 970, Boston, MA 02115, USA
+COMMENT     On Jan 31, 1996 this sequence version replaced gi:897842.
+FEATURES             Location/Qualifiers
+     source          1..1477
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="18"
+                     /map="18q21.3"
+     gene            join(U19558.1:214..365,U19559.1:1..326,U19560.1:1..624,
+                     U19561.1:1..157,U19562.1:1..712,U20066.1:1..577,
+                     U19563.1:1..109,U19564.1:1..241,U19565.1:1..441,
+                     U19566.1:1..61,U19567.1:1..380,1..1098)
+                     /gene="SSCA1"
+     mRNA            join(U19558.1:214..248,U19559.1:111..301,
+                     U19560.1:397..453,U19562.1:269..397,U20066.1:229..346,
+                     U19565.1:61..203,U19567.1:45..200,234..1098)
+                     /gene="SSCA1"
+     CDS             join(U19559.1:137..301,U19560.1:397..453,
+                     U19562.1:269..397,U20066.1:229..346,U19565.1:61..203,
+                     U19567.1:45..200,234..638)
+                     /gene="SSCA1"
+                     /codon_start=1
+                     /product="squamous cell carcinoma antigen"
+                     /protein_id="AAA86317.1"
+                     /db_xref="GI:1172087"
+                     /translation="MNSLSEANTKFMFDLFQQFRKSKENNIFYSPISITSALGMVLLG
+                     AKDNTAQQIKKVLHFDQVTENTTGKAATYHVDRSGNVHHQFQKLLTEFNKSTDAYELK
+                     IANKLFGEKTYLFLQEYLDAIKKFYQTSVESVDFANAPEESRKKINSWVESQTNEKIK
+                     NLIPEGNIGSNTTLVLVNAIYFKGQWEKKFNKEDTKEEKFWPNKNTYKSIQMMRQYTS
+                     FHFASLEDVQAKVLEIPYKGKDLSMIVLLPNEIDGLQKLEEKLTAEKLMEWTSLQNMR
+                     ETRVDLHLPRFKVEESYDLKDTLRTMGMVDIFNGDADLSGMTGSRGLVLSGVLHKAFV
+                     EVTEEGAEAAAATAVVGFGSSPTSTNEEFHCNHPFLFFIRQNKTNSILFYGRFSSP"
+     exon            234..1098
+                     /gene="SSCA1"
+                     /number=8
+     3'UTR           639..1098
+                     /gene="SSCA1"
+ORIGIN      
+        1 acacattaca tatacataaa ctgattcttt tatacacata cacatataac ccaatgtatt
+       61 tatatatcca ggactcatat tttgcctatt agaataataa tatctaataa agtgaacctt
+      121 ctgtatttca catttgttgc caaaataagg attctccaca tagtcaattc attgttaagg
+      841 ttcttccaga aaaattctcc ttgaggaaaa atgtccaaaa taagatgaat cacttaatac
+     1441 ggaatcatta gagtatgggt gaatgaagag aaaacgc
+//
+LOCUS       HSSCCA2S8               1146 bp    DNA     linear   PRI 22-MAR-1996
+DEFINITION  Human squamous cell carcinoma antigen (SCCA2) gene, exon 8 and
+            complete cds.
+ACCESSION   U19576
+VERSION     U19576.1  GI:1235615
+KEYWORDS    .
+SEGMENT     8 of 8
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 1146)
+  AUTHORS   Schneider,S.S., Schick,C., Fish,K.E., Miller,E., Pena,J.C.,
+            Treter,S.D., Hui,S.M. and Silverman,G.A.
+  TITLE     A serine proteinase inhibitor locus at 18q21.3 contains a tandem
+            duplication of the human squamous cell carcinoma antigen gene
+  JOURNAL   Proc. Natl. Acad. Sci. U.S.A. 92 (8), 3147-3151 (1995)
+   PUBMED   7724531
+REFERENCE   2  (bases 1 to 1146)
+  AUTHORS   Silverman,G.A.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (06-JAN-1995) Gary A. Silverman, Department of
+            Pediatrics, Harvard Medical School, Children's Hospital, 300
+            Longwood Avenue, Enders 970, Boston, MA 02115, USA
+COMMENT     On Mar 22, 1996 this sequence version replaced gi:852466.
+FEATURES             Location/Qualifiers
+     source          1..1146
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="18"
+                     /map="18q21.3"
+     gene            join(U19569.1:432..572,U19570.1:1..630,U19571.1:1..745,
+                     U19572.1:1..886,U19573.1:1..683,U19574.1:1..338,
+                     U19575.1:1..600,1..559)
+                     /gene="SCCA2"
+     mRNA            join(U19569.1:432..455,U19570.1:191..381,
+                     U19571.1:226..282,U19572.1:368..496,U19573.1:370..487,
+                     U19574.1:105..247,U19575.1:210..365,94..559)
+                     /gene="SCCA2"
+     CDS             join(U19570.1:217..381,U19571.1:226..282,
+                     U19572.1:368..496,U19573.1:370..487,U19574.1:105..247,
+                     U19575.1:210..365,94..498)
+                     /gene="SCCA2"
+                     /codon_start=1
+                     /product="squamous cell carcinoma antigen"
+                     /protein_id="AAA92602.1"
+                     /db_xref="GI:1235617"
+                     /translation="MNSLSEANTKFMFDLFQQFRKSKENNIFYSPISITSALGMVLLG
+                     AKDNTAQQISKVLHFDQVTENTTEKAATYHVDRSGNVHHQFQKLLTEFNKSTDAYELK
+                     IANKLFGEKTYQFLQEYLDAIKKFYQTSVESTDFANAPEESRKKINSWVESQTNEKIK
+                     NLFPDGTIGNDTTLVLVNAIYFKGQWENKFKKENTKEEKFWPNKNTYKSVQMMRQYNS
+                     FNFALLEDVQAKVLEIPYKGKDLSMIVLLPNEIDGLQKLEEKLTAEKLMEWTSLQNMR
+                     ETCVDLHLPRFKMEESYDLKDTLRTMGMVNIFNGDADLSGMTWSHGLSVSKVLHKAFV
+                     EVTEEGVEAAAATAVVVVELSSPSTNEEFCCNHPFLFFIRQNKTNSILFYGRFSSP"
+     exon            94..559
+                     /gene="SCCA2"
+                     /number=8
+     3'UTR           499..559
+                     /gene="SCCA2"
+ORIGIN      
+        1 caaaataacg aatctccaca tagtcaattc attgttaagg tgtattagag atcgacagtt
+       61 agtcatatca gtttcttttt tccatttgta tagcttgaag agaaactcac tgctgagaaa
+      121 ttgatggaat ggacaagttt gcagaatatg agagagacat gtgtcgattt acacttacct
+//
+LOCUS       HSGOLF05                8332 bp    DNA     linear   PRI 10-JUN-2003
+DEFINITION  Homo sapiens Golf alpha gene, exon 12 and complete cds.
+ACCESSION   U55184
+VERSION     U55184.1  GI:4097327
+KEYWORDS    .
+SEGMENT     5 of 5
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 8332)
+  AUTHORS   Vuoristo,J.T., Berrettini,W.H., Overhauser,J., Prockop,D.J.,
+            Ferraro,T.N. and Ala-Kokko,L.
+  TITLE     Sequence and genomic organization of the human G-protein Golfalpha
+            gene (GNAL) on chromosome 18p11, a susceptibility region for
+            bipolar disorder and schizophrenia
+  JOURNAL   Mol. Psychiatry 5 (5), 495-501 (2000)
+   PUBMED   11032382
+REFERENCE   2  (bases 1 to 8332)
+  AUTHORS   Vuoristo,J.T., Berrettini,W.H., Overhauser,J., Prockop,D.J.,
+            Ferraro,T.N. and Ala-Kokko,L.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (16-APR-1996) J.T. Vuoristo, Biochemistry and Molecular
+            Biology, Thomas Jefferson University, 233 South 10th Street,
+            Philadelphia, PA 19107, USA
+FEATURES             Location/Qualifiers
+     source          1..8332
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="18"
+                     /map="18p11.21-pter"
+     mRNA            join(U55180.1:1..3342,U55180.1:3608..3680,
+                     U55180.1:4381..4435,U55180.1:4579..4698,U55181.1:165..262,
+                     U55182.1:1965..2019,U55182.1:4100..4173,
+                     U55182.1:6722..6780,U55182.1:8100..8220,
+                     U55182.1:11790..11920,U55183.1:433..500,1990..8332)
+     CDS             join(U55180.1:3198..3342,U55180.1:3608..3680,
+                     U55180.1:4381..4435,U55180.1:4579..4698,U55181.1:165..262,
+                     U55182.1:1965..2019,U55182.1:4100..4173,
+                     U55182.1:6722..6780,U55182.1:8100..8220,
+                     U55182.1:11790..11920,U55183.1:433..500,1990..2136)
+                     /note="G protein"
+                     /codon_start=1
+                     /product="Golf alpha"
+                     /protein_id="AAD00085.1"
+                     /db_xref="GI:4097329"
+                     /translation="MGCLGGNSKTTEDQGVDEKERREANKKIEKQLQKERLAYKATHR
+                     LLLLGAGESGKSTIVKQMRILHVNGFNPEEKKQKILDIRKNVKDAIVTIVSAMSTIIP
+                     PVPLANPENQFRSDYIKSIAPITDFEYSQEFFDHVKKLWDDEGVKACFERSNEYQLID
+                     CAQYFLERIDSVSLVDYTPTDQDLLRCRVLTSGIFETRFQVDKVNFHMFDVGGQRDER
+                     RKWIQCFNDVTAIIYVAACSSYNMVIREDNNTNRLRESLDLFESIWNNRWLRTISIIL
+                     FLNKQDMLAEKVLAGKSKIEDYFPEYANYTVPEDATPDAGEDPKVTRAKFFIRDLFLR
+                     ISTATGDGKHYCYPHFTCAVDTENIRRVFNDCRDIIQRMHLKQYELL"
+     repeat_region   981..1267
+                     /rpt_family="Alu"
+     repeat_region   1289..1584
+                     /rpt_family="Alu"
+     exon            1990..8332
+                     /number=12
+     3'UTR           2137..8332
+     repeat_region   3407..3695
+                     /rpt_family="Alu"
+     repeat_region   4707..4994
+                     /rpt_family="Alu"
+     polyA_signal    6364..6369
+     polyA_signal    6655..6660
+ORIGIN      
+        1 taggagatac acctaatgta aatgacgagt taatgggtgc agcacaccaa catggcacat
+       61 gtatacatat gtaacaaacc tgcacgttgt nncatgtatc ctagaactta cagtataata
+      121 tatatatatt aaaaatatat atatataacc tactcattta gtgtcatagt ttttttttta
+//
