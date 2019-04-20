@@ -62,18 +62,3 @@ for orig_flag in orig_flags:
     gene_dna = orig_flag
     print(gene_dna,end=',')
 print('\n')
-
-'''
-ORIGIN
-        1 gatcctccat atacaacggt atctccacct caggtttaga tctcaacaac ggaaccattg
-       61 ccgacatgag acagttaggt atcgtcgaga gttacaagct aaaacgagca gtagtcagct
-     2881 caccatcacc atataacgta acgaagcatc gtaaccgcca cttacaaaat attcaagact
-     4921 ttttcagtgt tagattgctc taattctttg agctgttctc tcagctcctc atatttttct
-     4981 tgccatgact cagattctaa ttttaagcta ttcaatttct ctttgatc
-//r'^(ORIGIN)(.+?)\n'    ori_found = re.findall(ori_flag,f.read())
-'''
-
-
-            
-
-            
