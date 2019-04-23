@@ -1,7 +1,3 @@
-'''
-123456789012345678901234567890123456789012345678901234567890123456789012------9
-'''
-
 def db_request(db_input, db_query, db_output):
 
     """Returns specified DB records following a request from BL"""
@@ -237,4 +233,6 @@ def db_request(db_input, db_query, db_output):
 
 
 
-  
+ Known issues:
+        
+ None at present
