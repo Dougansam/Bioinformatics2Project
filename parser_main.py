@@ -13,7 +13,7 @@ with open('genbank2.txt','rt') as myfile:
             position = position + 1
             map_got = False
             gene_got = False
-            prot_got = False
+            prod_got = False
             sour_got = False
             join_got = False
             star_got = False           
@@ -41,12 +41,12 @@ with open('genbank2.txt','rt') as myfile:
                 gene_id = gene_found.group(3)
                 print(gene_id,end=',')
 
-        if prot_got == False:
-            prot_flag = re.compile('([\s]+)(/product=")(.+)(")')
-            prot_found = re.match(prot_flag,line)
-            if prot_found != None:
-                prot_got = True
-                prot_name = prot_found.group(3)
+        if prod_got == False:
+            prod_flag = re.compile('([\s]+)(/product=")(.+)(")')
+            prod_found = re.match(prod_flag,line)
+            if prod_found != None:
+                prod_got = True
+                prot_name = prod_found.group(3)
                 print(prot_name,end=',')
 
         if sour_got == False:
@@ -79,13 +79,23 @@ with open('genbank2.txt','rt') as myfile:
             new_locus = False
             print('\n','NEXT ',end='')
 
-print('\n')      
-gbfile = open('genbank2.txt','r')
-orig_flags = re.findall(r'(ORIGIN)',gbfile.read())
-for orig_flag in orig_flags:
-    gene_dna = orig_flag
-    print(gene_dna,end=',')
 print('\n')
 
 
+
+
+'''
+Known issues:
+
+1. For loci containing a partial cds followed by a complete cds, the
+program will provide product of partial sequence and gene id of complete
+sequence. This needs fixing.
+
+2. Some join instructions are not selected despite being present in the
+Genbank record. This is due to non-standard methods of listing by submitters.
+More join instructions could be reported if further work was done.
+
+3. The 'NF' = record not found utility needs to be added to this program.
+
+'''
             
