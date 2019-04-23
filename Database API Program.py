@@ -195,11 +195,6 @@ print("Database request results:",db_result)
 
 
 
-
-
-
-
-
-
-
+Known issues:
     
+None at present
