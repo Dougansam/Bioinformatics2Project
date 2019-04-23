@@ -1,6 +1,8 @@
-
-Contracted and short extract from Genbank Chromosome 18 for parser
-
+'''
+Contracted and short extract from Genbank for use with parsers. 
+It contains 7 entries, including the definitive entry from Genbank.
+NB All parser programs currently look for the file 'genbank2.txt'.
+'''
 
 
 
@@ -51,11 +53,6 @@ FEATURES             Location/Qualifiers
      gene            687..3158
                      /gene="AXL2"
 
-
-
-
-
-
      CDS             687..3158
                      /gene="AXL2"
                      /note="plasma membrane glycoprotein"
@@ -66,9 +63,7 @@ FEATURES             Location/Qualifiers
                      /protein_id="AAA98666.1"
                      /db_xref="GI:1293615"
                      /translation="MTQLQISLLLTATISLLHLVVATPYEAYPIGKQYPPVARVNESF
-                     
-                     
-HRNRHLQNIQDSQSGKNGITPTTMSTSSSDDFVPVKDGENFCWVHSMEPDRRPSKKRL
+                     HRNRHLQNIQDSQSGKNGITPTTMSTSSSDDFVPVKDGENFCWVHSMEPDRRPSKKRL
                      VDFSNKSNVNVGQVKDIHGRIPEML"
      gene            complement(3300..4037)
                      /gene="REV7"
@@ -78,7 +73,7 @@ HRNRHLQNIQDSQSGKNGITPTTMSTSSSDDFVPVKDGENFCWVHSMEPDRRPSKKRL
                      /product="Rev7p"
                      /protein_id="AAA98667.1"
                      /db_xref="GI:1293616"
-                     					/translation="MNRWVEKWLRVYLKCYINLILFYRNVYPPQSFDYTTYQSFNLRVDSLEEKAEIERDSNWVKCQEDENLPDNNGFQPPKIKLTSLVGSDVGPLIIHQFSEKISGDDKILNGVYSQYEEGESIFGSLF"
+                   /translation="MNRWVEKWLRVYLKCYINLILFYRNVYPPQSFDYTTYQSFNLRVDSLEEKAEIERDSNWVKCQEDENLPDNNGFQPPKIKLTSLVGSDVGPLIIHQFSEKISGDDKILNGVYSQYEEGESIFGSLF"
 ORIGIN
         1 gatcctccat atacaacggt atctccacct caggtttaga tctcaacaac ggaaccattg
        61 ccgacatgag acagttaggt atcgtcgaga gttacaagct aaaacgagca gtagtcagct
