@@ -1,3 +1,25 @@
+#!/usr/bin/env python3
+
+'''
+================================================================================
+*******************************
+* GENBANK GROUPED DATA PARSER *
+*******************************
+            
+Description:
+------------
+
+This program takes a text document containing Genbank records and sequentially
+returns the data for all records from various key fields. (Fields are: acc_code,
+chrom_loc, gene_id, prot_name, gene_span, exon_map, start_cod and complete DNA
+sequence.)
+
+'''
+#================================================================================
+#***************#   
+# MAIN PROGRAM  #
+#***************#
+
 import re
 
 with open('genbank2.txt','rt') as myfile:
@@ -60,24 +82,30 @@ f = open('genbank2.txt','rt')
 dna_found = re.findall\
 (r'(ORIGIN)[\s*]+1[\s]([a-z\s0-9]+)[\s]([a-z\s]+)[\s*]([//])',f.read())
 if dna_found != None:
-    print(dna_found,end=',')
+    dna_seq = dna_found
+    print(dna_seq,end=',')
 print('\n')
 
-
-
-
 '''
-Known issues:
+================================================================================
+****************
+* KNOWN ISSUES *
+****************
 
 1. For loci containing a partial cds followed by a complete cds, the
-program will provide product of partial sequence and gene id of complete
-sequence. This needs fixing.
+program will provide the product of the partial sequence and the gene id of
+the complete sequence. This needs fixing.
 
 2. Some join instructions are not selected despite being present in the
 Genbank record. This is due to non-standard methods of listing by submitters.
 More join instructions could be reported if further work was done.
 
 3. The 'NF' = 'record not found' utility needs to be added to this program.
+
+4. Currently, output needs trimming to remove extraneous upper case letters,
+numbers, white space and brackets.
+
+================================================================================
 
 '''
  
