@@ -20,22 +20,22 @@ complete DNA sequence, consecutively, from each record.
 
 import re
 
-f = open('genbank2.txt','rt')
-dna_found = re.findall\
-(r'(ORIGIN)[\s*]+1[\s]([a-z\s0-9]+)[\s]([a-z\s]+)[\s*]([//])',f.read())
+f = open('genbank2.txt','r')
+dna_found = re.findall(r'ORIGIN[\s*]+([a-z\s0-9]+)[\s*]//',f.read())
 if dna_found != None:
-    dna_seq = dna_found
-    print(dna_seq,end=',')
+    dna_seqs = dna_found
+    dna_seqs = [re.sub(r'\s+','', dna_seq) for dna_seq in dna_seqs]
+    dna_seqs = [re.sub(r'[0-9]+','', dna_seq) for dna_seq in dna_seqs]
+    print(dna_seqs,end=',')
 print('\n')
 
 '''
-================================================================================
+===============================================================================
 ****************
 * KNOWN ISSUES *
 ****************
 
-1. Currently, output needs trimming to remove extraneous upper case letters,
-numbers, white space and brackets.
+None
 
 ================================================================================
 
