@@ -8,8 +8,8 @@
 Description:
 ------------
 This program takes a text document containing Genbank records and sequentially
-returns the data for each record from various key fields. (Fields are: acc_code,
-chrom_loc, gene_id, prot_name, gene_span, exon_map and start_cod.).
+returns the data for each record from various key fields (acc_code, chrom_loc,
+gene_id, prot_name, gene_span, exon_map and start_cod).
 
 --------------------------------------------------------------------------------
 '''
@@ -20,8 +20,8 @@ chrom_loc, gene_id, prot_name, gene_span, exon_map and start_cod.).
 import re
 position = 0
 
-with open('genbank2.txt','rt') as myfile:
-    for line in myfile:
+with open('genbank2.txt','rt') as file:
+    for line in file:
         
         loc_flag = re.compile('(LOCUS)')
         loc_found = re.match(loc_flag,line)
@@ -33,7 +33,7 @@ with open('genbank2.txt','rt') as myfile:
             gene_id = 'NF' 
             prot_name = 'NF'
             gene_span = 'NF'
-            exon_map = 'NF'
+            exon_map = 'NF,'
             start_cod = 'NF'
             map_got = False
             gene_got = False
@@ -97,7 +97,7 @@ with open('genbank2.txt','rt') as myfile:
             print(gene_id,end=',')
             print(prot_name,end=',')
             print(gene_span,end=',')
-            print(exon_map,end=',')
+            print(exon_map,end='')
             print(start_cod,end=',') 
             print('\n','NEXT ',end='')
 print('\n')
