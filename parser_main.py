@@ -23,30 +23,35 @@ position = 0
 with open('genbank2.txt','rt') as file:
     for line in file:
         
+        # register start of each record
         loc_flag = re.compile('(LOCUS)')
         loc_found = re.match(loc_flag,line)
         if loc_found != None:
             position = position + 1
             print('LOCUS' ,position, 'of 111:')
-            
+
+            # allow for 'data not found'
             chrom_loc = 'NF'
             gene_id = 'NF' 
             prot_name = 'NF'
             gene_span = 'NF'
             exon_map = 'NF,'
             start_cod = 'NF'
+            
             map_got = False
             gene_got = False
             prod_got = False
             sour_got = False
             join_got = False
             star_got = False
-            
+
+        # detect and record specific data types 
         acc_flag = re.compile('ACCESSION[\s]+([A-Z]+[0-9]+)')
         acc_found = re.match(acc_flag,line)
         if acc_found != None:
             acc_code = acc_found.group(1)
-
+            
+        # avoid duplicate data for single records
         if map_got == False:  
             map_flag = re.compile('[\s]+/map="(.+)"')
             map_found = re.match(map_flag,line)
@@ -89,6 +94,7 @@ with open('genbank2.txt','rt') as file:
                 star_got = True
                 start_cod = star_found.group(1)     
 
+        # detect record end; print its data
         end_flag = re.compile(r'//')
         end_found = re.match(end_flag,line)
         if end_found != None:
