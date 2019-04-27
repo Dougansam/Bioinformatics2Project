@@ -1,12 +1,3 @@
-'''
-Contracted and short extract from Genbank for use with parsers. 
-It contains 7 entries, including the definitive entry from Genbank.
-NB All parser programs currently look for the file 'genbank2.txt'.
-'''
-
-
-
-
 LOCUS       SCU49845     5028 bp    DNA             PLN       21-JUN-1999
 DEFINITION  Saccharomyces cerevisiae TCP1-beta gene, partial cds, and Axl2p
             (AXL2) and Rev7p (REV7) genes, complete cds.
@@ -53,6 +44,11 @@ FEATURES             Location/Qualifiers
      gene            687..3158
                      /gene="AXL2"
 
+
+
+
+
+
      CDS             687..3158
                      /gene="AXL2"
                      /note="plasma membrane glycoprotein"
@@ -63,7 +59,9 @@ FEATURES             Location/Qualifiers
                      /protein_id="AAA98666.1"
                      /db_xref="GI:1293615"
                      /translation="MTQLQISLLLTATISLLHLVVATPYEAYPIGKQYPPVARVNESF
-                     HRNRHLQNIQDSQSGKNGITPTTMSTSSSDDFVPVKDGENFCWVHSMEPDRRPSKKRL
+                     
+                     
+HRNRHLQNIQDSQSGKNGITPTTMSTSSSDDFVPVKDGENFCWVHSMEPDRRPSKKRL
                      VDFSNKSNVNVGQVKDIHGRIPEML"
      gene            complement(3300..4037)
                      /gene="REV7"
@@ -73,7 +71,7 @@ FEATURES             Location/Qualifiers
                      /product="Rev7p"
                      /protein_id="AAA98667.1"
                      /db_xref="GI:1293616"
-                   /translation="MNRWVEKWLRVYLKCYINLILFYRNVYPPQSFDYTTYQSFNLRVDSLEEKAEIERDSNWVKCQEDENLPDNNGFQPPKIKLTSLVGSDVGPLIIHQFSEKISGDDKILNGVYSQYEEGESIFGSLF"
+                     					/translation="MNRWVEKWLRVYLKCYINLILFYRNVYPPQSFDYTTYQSFNLRVDSLEEKAEIERDSNWVKCQEDENLPDNNGFQPPKIKLTSLVGSDVGPLIIHQFSEKISGDDKILNGVYSQYEEGESIFGSLF"
 ORIGIN
         1 gatcctccat atacaacggt atctccacct caggtttaga tctcaacaac ggaaccattg
        61 ccgacatgag acagttaggt atcgtcgaga gttacaagct aaaacgagca gtagtcagct
@@ -559,3 +557,550 @@ ORIGIN
        61 gtatacatat gtaacaaacc tgcacgttgt nncatgtatc ctagaactta cagtataata
       121 tatatatatt aaaaatatat atatataacc tactcattta gtgtcatagt ttttttttta
 //
+LOCUS       LISOD                    756 bp    DNA     linear   BCT 30-JUN-1993
+DEFINITION  Listeria ivanovii sod gene for superoxide dismutase.
+ACCESSION   X64011 S78972
+VERSION     X64011.1  GI:44010
+KEYWORDS    sod gene; superoxide dismutase.
+SOURCE      Listeria ivanovii
+  ORGANISM  Listeria ivanovii
+            Bacteria; Firmicutes; Bacillales; Listeriaceae; Listeria. 
+REFERENCE   1  (bases 1 to 756)
+  AUTHORS   Haas,A. and Goebel,W.
+  TITLE     Cloning of a superoxide dismutase gene from Listeria ivanovii by
+            functional complementation in Escherichia coli and characterization
+            of the gene product
+  JOURNAL   Mol. Gen. Genet. 231 (2), 313-322 (1992)
+  MEDLINE   92140371
+REFERENCE   2  (bases 1 to 756)
+  AUTHORS   Kreft,J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (21-APR-1992) J. Kreft, Institut f. Mikrobiologie,
+            Universitaet Wuerzburg, Biozentrum Am Hubland, 8700 Wuerzburg, FRG
+FEATURES             Location/Qualifiers
+     source          1..756
+                     /organism="Listeria ivanovii"
+                     /strain="ATCC 19119"
+                     /db_xref="taxon:1638"
+                     /mol_type="genomic DNA"
+     regulatory      95..100
+                     /gene="sod"
+                     /regulatory_class="ribosome_binding_site"
+     gene            95..746
+                     /gene="sod"
+     CDS             109..717
+                     /gene="sod"
+                     /EC_number="1.15.1.1"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="superoxide dismutase" 
+                     /db_xref="GI:44011"
+                     /db_xref="GOA:P28763"
+                     /db_xref="InterPro:IPR001189"
+                     /db_xref="UniProtKB/Swiss-Prot:P28763"
+                     /protein_id="CAA45406.1"
+                     /translation="MTYELPKLPYTYDALEPNFDKETMEIHYTKHHNIYVTKLNEAVS
+                     GHAELASKPGEELVANLDSVPEEIRGAVRNHGGGHANHTLFWSSLSPNGGGAPTGNLK
+                     AAIESEFGTFDEFKEKFNAAAAARFGSGWAWLVVNNGKLEIVSTANQDSPLSEGKTPV
+                     LGLDVWEHAYYLKFQNRRPEYIDTFWNVINWDERNKRFDAAK"
+     regulatory      723..746
+                     /gene="sod"
+                     /regulatory_class="terminator"
+ORIGIN      
+        1 cgttatttaa ggtgttacat agttctatgg aaatagggtc tatacctttc gccttacaat
+       61 gtaatttctt
+//
+LOCUS       HUMPROK                11613 bp    DNA     linear   PRI 07-SEP-1995
+DEFINITION  Human myotonin protein kinase (Mt-PK) gene, complete cds.
+ACCESSION   L00727
+VERSION     L00727.1
+KEYWORDS    .
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 11613)
+  AUTHORS   Fu,Y.-H., Friedman,D.L., Richards,S., Pearlman,J.A., Gibbs,R.A.,
+            Pizzuti,A., Ashizawa,T., Perryman,M.B., Scarlato,G., Fenwick,R.G.
+            Jr. and Caskey,C.T.
+  TITLE     Decreased expression of myotonin-protein kinase messenger RNA and
+            protein in adult form of myotonic dystrophy
+  JOURNAL   Science 260 (5105), 235-238 (1993)
+   PUBMED   8469976
+REFERENCE   2  (sites)
+  AUTHORS   Fu,Y.-H., Pizzuti,A., Fenwick,R.G. Jr., King,J., Rajnarayan,S.,
+            Dunne,P.W., Dubel,J., Nasser,G.A., Ashizawa,T., de Jong,P.,
+            Wieringa,B., Korneluk,R., Perryman,M.B., Epstein,H.F. and
+            Caskey,C.T.
+  TITLE     An unstable triplet repeat in a gene related to myotonic muscular
+            dystrophy
+  JOURNAL   Science 255 (5049), 1256-1258 (1992)
+   PUBMED   1546326
+FEATURES             Location/Qualifiers
+     source          1..11613
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="19"
+                     /map="19q13.2"
+                     /clone="cosmid MDY1"
+                     /tissue_lib="St. Louis"
+     gene            1310..11188
+                     /gene="Mt-PK"
+     mRNA            join(1310..2135,2391..2474,2554..2649,3272..3420,
+                     3693..3786,4040..4246,4322..4585,5901..5986,8184..8295,
+                     9008..9165,9271..9368,9540..9586,9876..9965,10296..11188)
+                     /gene="Mt-PK"
+                     /note="alternatively spliced Form I mRNA; exons were
+                     positioned according to M87312; I and III are the major
+                     forms in most tissues except fetal and newborn muscle"
+     mRNA            join(1310..2135,2391..2474,2554..2649,3272..3420,
+                     3693..3786,4040..4246,4322..4585,5901..5986,8184..8295,
+                     9008..9165,9271..9368,9540..9586,10296..11188)
+                     /gene="Mt-PK"
+                     /product="alternatively spliced Form VII mRNA"
+     mRNA            join(1310..2135,2391..2474,2554..2649,3272..3420,
+                     3693..3786,4040..4246,4322..4585,5901..5986,8184..8295,
+                     9008..9165,9271..9368,10296..11188)
+                     /gene="Mt-PK"
+                     /product="alternatively spliced Form VIII mRNA"
+     mRNA            join(1310..2135,2391..2474,2554..2649,3272..3420,
+                     3693..3786,4040..4246,4322..4570,5901..5986,8184..8295,
+                     9008..9165,9271..9368,9540..9586,9876..9965,10296..11188)
+                     /gene="Mt-PK"
+                     /product="alternatively spliced Form VI mRNA"
+     mRNA            join(1310..2135,2391..2474,2554..2649,3272..3420,
+                     3693..3786,4190..4246,4322..4585,5901..5986,8184..8295,
+                     9008..9165,9271..9368,9540..9586,9876..9965,10296..11188)
+                     /gene="Mt-PK"
+                     /product="alternatively spliced Form V mRNA"
+     mRNA            join(1310..1699,2044..2135,2391..2474,2554..2649,
+                     3272..3420,3693..3786,4040..4246,4322..4585,5901..5986,
+                     8184..8295,9008..9165,9271..9368,9540..9586,9876..9965,
+                     10296..11188)
+                     /gene="Mt-PK"
+                     /product="alternatively spliced Form II mRNA"
+     mRNA            join(1310..1590,2044..2135,2391..2474,2554..2649,
+                     3272..3420,3693..3786,4040..4246,4322..4585,5901..5986,
+                     8184..8295,9008..9165,9271..9368,9540..9586,9876..9965,
+                     10296..11188)
+                     /gene="Mt-PK"
+                     /product="alternatively spliced Form III mRNA"
+     mRNA            join(1310..1418,1532..1590,2044..2135,2391..2474,
+                     2554..2649,3272..3420,3693..3786,4040..4246,4322..4585,
+                     5901..5986,8184..8295,9008..9165,9271..9368,9540..9586,
+                     9876..9965,10296..11188)
+                     /gene="Mt-PK"
+                     /note="alternatively spliced Form IV mRNA, the major form
+                     in fetal and newborn muscle"
+     exon            1310..2135
+                     /gene="Mt-PK"
+                     /note="Form I,V,VI,VII,VIII mRNA"
+     exon            1310..1699
+                     /gene="Mt-PK"
+                     /note="Form II mRNA"
+     exon            1310..1590
+                     /gene="Mt-PK"
+                     /note="Form III mRNA"
+     exon            1310..1418
+                     /gene="Mt-PK"
+                     /note="Form IV mRNA"
+     exon            1532..1590
+                     /gene="Mt-PK"
+                     /note="Form IV mRNA"
+     CDS             join(1854..2135,2391..2474,2554..2649,3272..3420,
+                     3693..3786,4040..4246,4322..4585,5901..5986,8184..8295,
+                     9008..9165,9271..9368,9540..9586,9876..9965,10296..10448)
+                     /gene="Mt-PK"
+                     /note="Form I mRNA"
+                     /codon_start=1
+                     /product="myotonin-protein kinase, Form I"
+                     /protein_id="AAA75236.1"
+                     /translation="MGGHFWPPEPYTVFMWGSPWEADSPRVKLRGREKGRQTEGGAFP
+                     LVSSALSGDPRFFSPTTPPAEPIVVRLKEVRLQRDDFEILKVIGRGAFSEVAVVKMKQ
+                     TGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQLHFAFQDENYLYLVMEY
+                     YVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGYVHRDIKPDNILLDRCGH
+                     IRLADFGSCLKLRADGTVRSLVAVGTPDYLSPEILQAVGGGPGTGSYGPECDWWALGV
+                     FAYEMFYGQTPFYADSTAETYGKIVHYKEHLSLPLVDEGVPEEARDFIQRLLCPPETR
+                     LGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTCNFDLVEDGLTAMVSGGG
+                     ETLSDIREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEVEAEQLLEPHVQAPSLEP
+                     SVSPQDETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLTRQSLSREMEAIRTDNQN
+                     FASQLREAEARNRDLEAHVRQLQERMELLQAEGATAVTGVPSPRATDPPSHLDGPPAV
+                     AVGQCPLVGPGPMHRRHLLLPARVPRPGLSEALSLLLFAVVLSRAAALGCIGLVAHAG
+                     QLTAVWRRPGAARAP"
+     CDS             join(1854..2135,2391..2474,2554..2649,3272..3420,
+                     3693..3786,4040..4246,4322..4585,5901..5986,8184..8295,
+                     9008..9165,9271..9368,9540..9586,10296..10448)
+                     /gene="Mt-PK"
+                     /note="The Form VII mRNA product has a 30 residue deletion
+                     compared to Form I"
+                     /codon_start=1
+                     /product="myotonin-protein kinase, Form VII"
+                     /protein_id="AAA75238.1"
+                     /translation="MGGHFWPPEPYTVFMWGSPWEADSPRVKLRGREKGRQTEGGAFP
+                     LVSSALSGDPRFFSPTTPPAEPIVVRLKEVRLQRDDFEILKVIGRGAFSEVAVVKMKQ
+                     TGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQLHFAFQDENYLYLVMEY
+                     YVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGYVHRDIKPDNILLDRCGH
+                     IRLADFGSCLKLRADGTVRSLVAVGTPDYLSPEILQAVGGGPGTGSYGPECDWWALGV
+                     FAYEMFYGQTPFYADSTAETYGKIVHYKEHLSLPLVDEGVPEEARDFIQRLLCPPETR
+                     LGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTCNFDLVEDGLTAMVSGGG
+                     ETLSDIREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEVEAEQLLEPHVQAPSLEP
+                     SVSPQDETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLTRQSLSREMEAIRTDNQN
+                     FASQLREAEARNRDLEAHVRQLQERMELLQAEGATAVTGVPSPRATDPPSHVPRPGLS
+                     EALSLLLFAVVLSRAAALGCIGLVAHAGQLTAVWRRPGAARAP"
+     CDS             join(1854..2135,2391..2474,2554..2649,3272..3420,
+                     3693..3786,4040..4246,4322..4570,5901..5986,8184..8295,
+                     9008..9165,9271..9368,9540..9586,9876..9965,10296..10448)
+                     /gene="Mt-PK"
+                     /note="The Form VI mRNA product has a 5 residue deletion
+                     compared to Form I"
+                     /codon_start=1
+                     /product="myotonin-protein kinase, Form VI"
+                     /protein_id="AAA75239.1"
+                     /translation="MGGHFWPPEPYTVFMWGSPWEADSPRVKLRGREKGRQTEGGAFP
+                     LVSSALSGDPRFFSPTTPPAEPIVVRLKEVRLQRDDFEILKVIGRGAFSEVAVVKMKQ
+                     TGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQLHFAFQDENYLYLVMEY
+                     YVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGYVHRDIKPDNILLDRCGH
+                     IRLADFGSCLKLRADGTVRSLVAVGTPDYLSPEILQAVGGGPGTGSYGPECDWWALGV
+                     FAYEMFYGQTPFYADSTAETYGKIVHYKEHLSLPLVDEGVPEEARDFIQRLLCPPETR
+                     LGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTCNFDLVEDGLTAMETLSD
+                     IREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEVEAEQLLEPHVQAPSLEPSVSPQ
+                     DETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLTRQSLSREMEAIRTDNQNFASQL
+                     REAEARNRDLEAHVRQLQERMELLQAEGATAVTGVPSPRATDPPSHLDGPPAVAVGQC
+                     PLVGPGPMHRRHLLLPARVPRPGLSEALSLLLFAVVLSRAAALGCIGLVAHAGQLTAV
+                     WRRPGAARAP"
+     CDS             join(1854..2135,2391..2474,2554..2649,3272..3420,
+                     3693..3786,4190..4246,4322..4585,5901..5986,8184..8295,
+                     9008..9165,9271..9368,9540..9586,9876..9965,10296..10448)
+                     /gene="Mt-PK"
+                     /note="The Form V mRNA product has a 50 residue deletion
+                     compared to Form I"
+                     /codon_start=1
+                     /product="myotonin-protein kinase, Form V"
+                     /protein_id="AAA75235.1"
+                     /translation="MGGHFWPPEPYTVFMWGSPWEADSPRVKLRGREKGRQTEGGAFP
+                     LVSSALSGDPRFFSPTTPPAEPIVVRLKEVRLQRDDFEILKVIGRGAFSEVAVVKMKQ
+                     TGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQLHFAFQDENYLYLVMEY
+                     YVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGYVHRDIKPDNILLDRCGH
+                     IRLADFGSCLKLRADGTTPFYADSTAETYGKIVHYKEHLSLPLVDEGVPEEARDFIQR
+                     LLCPPETRLGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTCNFDLVEDGL
+                     TAMVSGGGETLSDIREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEVEAEQLLEPH
+                     VQAPSLEPSVSPQDETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLTRQSLSREME
+                     AIRTDNQNFASQLREAEARNRDLEAHVRQLQERMELLQAEGATAVTGVPSPRATDPPS
+                     HLDGPPAVAVGQCPLVGPGPMHRRHLLLPARVPRPGLSEALSLLLFAVVLSRAAALGC
+                     IGLVAHAGQLTAVWRRPGAARAP"
+     CDS             join(1854..2135,2391..2474,2554..2649,3272..3420,
+                     3693..3786,4040..4246,4322..4585,5901..5986,8184..8295,
+                     9008..9165,9271..9368,10296..10303)
+                     /gene="Mt-PK"
+                     /note="The Form VIII mRNA product terminates immediately
+                     after the final splice acceptor and is missing a predicted
+                     COOH-transmembrane domain found in Form I"
+                     /codon_start=1
+                     /product="myotonin-protein kinase, Form VIII"
+                     /protein_id="AAA75237.1"
+                     /translation="MGGHFWPPEPYTVFMWGSPWEADSPRVKLRGREKGRQTEGGAFP
+                     LVSSALSGDPRFFSPTTPPAEPIVVRLKEVRLQRDDFEILKVIGRGAFSEVAVVKMKQ
+                     TGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQLHFAFQDENYLYLVMEY
+                     YVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGYVHRDIKPDNILLDRCGH
+                     IRLADFGSCLKLRADGTVRSLVAVGTPDYLSPEILQAVGGGPGTGSYGPECDWWALGV
+                     FAYEMFYGQTPFYADSTAETYGKIVHYKEHLSLPLVDEGVPEEARDFIQRLLCPPETR
+                     LGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTCNFDLVEDGLTAMVSGGG
+                     ETLSDIREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEVEAEQLLEPHVQAPSLEP
+                     SVSPQDETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLTRQSLSREMEAIRTDNQN
+                     FASQLREAEARNRDLEAHVRQLQERMELLQAEGATGP"
+     exon            2044..2135
+                     /gene="Mt-PK"
+                     /note="Form II,III,and IV mRNA"
+     exon            2391..2474
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI,VII,VIII mRNA"
+     CDS             join(2406..2474,2554..2649,3272..3420,3693..3786,
+                     4040..4246,4322..4585,5901..5986,8184..8295,9008..9165,
+                     9271..9368,9540..9586,9876..9965,10296..10448)
+                     /gene="Mt-PK"
+                     /note="Form II,III,IV mRNA products each are missing the
+                     99 residues from the N-terminus of Form I"
+                     /codon_start=1
+                     /product="myotonin-protein kinase, Form II,III,IV"
+                     /protein_id="AAA75240.1"
+                     /translation="MKQTGQVYAMKIMNKWDMLKRGEVSCFREERDVLVNGDRRWITQ
+                     LHFAFQDENYLYLVMEYYVGGDLLTLLSKFGERIPAEMARFYLAEIVMAIDSVHRLGY
+                     VHRDIKPDNILLDRCGHIRLADFGSCLKLRADGTVRSLVAVGTPDYLSPEILQAVGGG
+                     PGTGSYGPECDWWALGVFAYEMFYGQTPFYADSTAETYGKIVHYKEHLSLPLVDEGVP
+                     EEARDFIQRLLCPPETRLGRGGAGDFRTHPFFFGLDWDGLRDSVPPFTPDFEGATDTC
+                     NFDLVEDGLTAMVSGGGETLSDIREGAPLGVHLPFVGYSYSCMALRDSEVPGPTPMEV
+                     EAEQLLEPHVQAPSLEPSVSPQDETAEVAVPAAVPAAEAEAEVTLRELQEALEEEVLT
+                     RQSLSREMEAIRTDNQNFASQLREAEARNRDLEAHVRQLQERMELLQAEGATAVTGVP
+                     SPRATDPPSHLDGPPAVAVGQCPLVGPGPMHRRHLLLPARVPRPGLSEALSLLLFAVV
+                     LSRAAALGCIGLVAHAGQLTAVWRRPGAARAP"
+     exon            2554..2649
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI,VII,VIII mRNA"
+     exon            3272..3420
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI,VII,VIII mRNA"
+     exon            3693..3786
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI,VII,VIII mRNA"
+     exon            4040..4246
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,VI,VII,VIII mRNA"
+     exon            4190..4246
+                     /gene="Mt-PK"
+                     /note="Form V mRNA"
+     exon            4322..4585
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VII,VIII mRNA"
+     exon            4322..4570
+                     /gene="Mt-PK"
+                     /note="Form VI mRNA"
+     repeat_region   5153..5434
+                     /gene="Mt-PK"
+                     /rpt_family="Alu-J"
+                     /rpt_type=dispersed
+     repeat_region   5469..5772
+                     /gene="Mt-PK"
+                     /rpt_family="Alu-Sc"
+                     /rpt_type=dispersed
+     exon            5901..5986
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI,VII,VIII mRNA"
+     repeat_region   6363..6373
+                     /gene="Mt-PK"
+                     /rpt_type=direct
+     repeat_region   6374..6674
+                     /gene="Mt-PK"
+                     /rpt_family="Alu-Sb"
+                     /rpt_type=dispersed
+     repeat_region   6386..6980
+                     /gene="Mt-PK"
+                     /rpt_family="Alu-Sp"
+                     /rpt_type=dispersed
+     repeat_region   6675..6685
+                     /gene="Mt-PK"
+                     /rpt_type=direct
+     repeat_region   6981..6993
+                     /gene="Mt-PK"
+                     /rpt_type=direct
+     repeat_region   6994..7274
+                     /gene="Mt-PK"
+                     /rpt_family="Alu-J"
+                     /rpt_type=dispersed
+     repeat_region   7275..7286
+                     /gene="Mt-PK"
+                     /rpt_type=direct
+     misc_feature    7715..8045
+                     /gene="Mt-PK"
+                     /note="similar to EST sequence in GenBank Accession Number
+                     H04589"
+     misc_feature    7878..7946
+                     /gene="Mt-PK"
+                     /note="sequence not found in GenBank Accesssion Number
+                     L08835"
+     exon            8184..8295
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI,VII,VIII mRNA"
+     exon            9008..9165
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI,VII,VIII mRNA"
+     exon            9271..9368
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI,VII,VIII mRNA"
+     exon            9540..9586
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI,VII mRNA"
+     misc_feature    9571..10953
+                     /gene="Mt-PK"
+                     /note="region previously sequenced; see GenBank Accession
+                     Number M87313"
+     exon            9876..9965
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI mRNA"
+     exon            10296..11188
+                     /gene="Mt-PK"
+                     /note="Form I,II,III,IV,V,VI,VII,VIII mRNA"
+     repeat_region   10677..10703
+                     /gene="Mt-PK"
+                     /note="9 gct repeats in this region; expanded variants
+                     known to be present in patients with myotonic dystrophy"
+                     /rpt_unit_seq="gct"
+ORIGIN      
+        1 ccatggcctc tctgcacccc gcctcagggt cagggtcagg gtcatgctgg gagctccctc
+       61 tcctaggacc ctccccccaa aagtgggctc tatggccctc tcccctggtt tcctgtggcc
+      121 tggggcaagc caggagggcc agcatggggc agctgccagg ggcgcagccg acaggcaggt
+      181 gttcggcgcc agcctctcca gctgccccaa caggtgccca ggcgctggga gggcggtgac
+    11521 acgcaagctc gagaaaagtt gctgcaaact ttctagcccg ttccccgccc ctcctcccgg
+    11581 ccagacccgc cccccctgcg gagccgggaa ttc
+//
+                                      
+LOCUS       AF090832                5086 bp    DNA     linear   INV 04-AUG-1999
+DEFINITION  Drosophila melanogaster muscle LIM protein at 84B (Mlp84B) gene,
+            complete cds.
+ACCESSION   AF090832
+VERSION     AF090832.1
+KEYWORDS    .
+SOURCE      Drosophila melanogaster (fruit fly)
+  ORGANISM  Drosophila melanogaster
+            Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+            Pterygota; Neoptera; Holometabola; Diptera; Brachycera;
+            Muscomorpha; Ephydroidea; Drosophilidae; Drosophila; Sophophora.
+REFERENCE   1  (bases 1 to 5086)
+  AUTHORS   Stronach,B.E., Renfranz,P.J., Lilly,B. and Beckerle,M.C.
+  TITLE     Muscle LIM proteins are associated with muscle sarcomeres and
+            require dMEF2 for their expression during Drosophila myogenesis
+  JOURNAL   Mol. Biol. Cell 10 (7), 2329-2342 (1999)
+   PUBMED   10397768
+REFERENCE   2  (bases 1 to 5086)
+  AUTHORS   Stronach,B.E., Renfranz,P.J., Lilly,B. and Beckerle,M.C.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (09-SEP-1998) Biology, University of Utah, 257 S. 1400
+            East, Salt Lake City, UT 84112-0840, USA
+FEATURES             Location/Qualifiers
+     source          1..5086
+                     /organism="Drosophila melanogaster"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:7227"
+                     /chromosome="3"
+                     /map="3R; 84B-C"
+     gene            166..5010
+                     /gene="Mlp84B"
+     protein_bind    166..175
+                     /gene="Mlp84B"
+                     /note="matches consensus at only 9 of 10 positions"
+                     /bound_moiety="MEF2"
+     mRNA            join(1001..1055,2868..4655)
+                     /gene="Mlp84B"
+     5'UTR           join(1001..1055,2868..2946)
+                     /gene="Mlp84B"
+     protein_bind    1007..1016
+                     /gene="Mlp84B"
+                     /note="site A"
+                     /bound_moiety="MEF2"
+     protein_bind    1225..1234
+                     /gene="Mlp84B"
+                     /note="site B"
+                     /bound_moiety="MEF2"
+     protein_bind    1321..1330
+                     /gene="Mlp84B"
+                     /note="site C"
+                     /bound_moiety="MEF2"
+     protein_bind    1324..1333
+                     /gene="Mlp84B"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="site D; shown to bind Drosophila MEF2 in an in
+                     vitro gel shift assay"
+                     /bound_moiety="MEF2"
+     protein_bind    1579..1588
+                     /gene="Mlp84B"
+                     /note="site E"
+                     /bound_moiety="MEF2"
+     protein_bind    2335..2344
+                     /gene="Mlp84B"
+                     /note="matches consensus at only 9 of 10 positions"
+                     /bound_moiety="MEF2"
+     CDS             2947..4434
+                     /gene="Mlp84B"
+                     /note="MLP84B"
+                     /codon_start=1
+                     /product="muscle LIM protein at 84B"
+                     /protein_id="AAC61591.1"
+                     /translation="MPSFQPIEAPKCPRCGKSVYAAEERLAGGYVFHKNCFKCGMCNK
+                     SLDSTNCTEHERELYCKTCHGRKFGPKGYGFGTGAGTLSMDNGSQFLRENGDVPSVRN
+                     GARLEPRAIARAPEGEGCPRCGGYVYAAEQMLARGRSWHKECFKCGTCKKGLDSILCC
+                     EAPDKNIYCKGCYAKKFGPKGYGYGQGGGALQSDCYAHDDGAPQIRAAIDVDKIQARP
+                     GEGCPRCGGVVYAAEQKLSKGREWHKKCFNCKDCHKTLDSINASDGPDRDVYCRTCYG
+                     KKWGPHGYGFACGSGFLQTDGLTEDQISANRPFYNPDTTSIKARDGEGCPRCGGAVFA
+                     AEQQLSKGKVWHKKCYNCADCHRPLDSVLACDGPDGDIHCRACYGKLFGPKGFGYGHA
+                     PTLVSTSGESTIQFPDGRPLAGPKTSGGCPRCGFAVFAAEQMISKTRIWHKRCFYCSD
+                     CRKSLDSTNLNDGPDGDIYCRACYGRNFGPKGVGYGLGAGALTTF"
+     3'UTR           4435..4655
+                     /gene="Mlp84B"
+     protein_bind    4629..4638
+                     /gene="Mlp84B"
+                     /note="matches consensus at only 9 of 10 positions"
+                     /bound_moiety="MEF2"
+     protein_bind    4955..4964
+                     /gene="Mlp84B"
+                     /note="matches consensus at only 9 of 10 positions"
+                     /bound_moiety="MEF2"
+     protein_bind    5001..5010
+                     /gene="Mlp84B"
+                     /note="site F"
+                     /bound_moiety="MEF2"
+ORIGIN      
+        1 tgatcaaacc taaagagtgg gacagagagt actactatat tcgtttcact cgccaaaagt
+       61 tttgaacgca ggcgccttgc caatttttgt atcatactta taagtggaaa tgcaattgca
+      121 aatgcatgtt aaaaatgttt tgagaaattc tgccgaaggt gcgcgttaat tatacaaaag
+      181 gtgttgccca cccgttcttg tctttaagaa attccgtgtt tttcaatgct accccttgaa
+      241 cttcggaatt ttcgatcgat ccatttttta aaatggtgtg tgtttcgatc gaaatactgt
+     4981 gatatactta tgaaatctga ttatttataa tgatgtttga atggatttct cacccatcta
+     5041 atctcttgca ttctgttttg gggatgccag ccatgggcag atatta
+//
+
+LOCUS       AF165912                5485 bp    DNA     linear   PLN 29-JUL-1999
+DEFINITION  Arabidopsis thaliana CTP:phosphocholine cytidylyltransferase (CCT)
+            gene, complete cds.
+ACCESSION   AF165912
+VERSION     AF165912.1
+KEYWORDS    .
+SOURCE      Arabidopsis thaliana (thale cress)
+  ORGANISM  Arabidopsis thaliana
+            Eukaryota; Viridiplantae; Streptophyta; Embryophyta; Tracheophyta;
+            Spermatophyta; Magnoliophyta; eudicotyledons; Gunneridae;
+            Pentapetalae; rosids; malvids; Brassicales; Brassicaceae;
+            Camelineae; Arabidopsis.
+REFERENCE   1  (bases 1 to 5485)
+  AUTHORS   Choi,Y.H., Choi,S.B. and Cho,S.H.
+  TITLE     Structure of a CTP:Phosphocholine Cytidylyltransferase Gene from
+            Arabidopsis thaliana
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 5485)
+  AUTHORS   Choi,Y.H., Choi,S.B. and Cho,S.H.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (06-JUL-1999) Biology, Inha University, Yonghyon-Dong
+            253, Inchon 402-751, Korea
+FEATURES             Location/Qualifiers
+     source          1..5485
+                     /organism="Arabidopsis thaliana"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:3702"
+                     /ecotype="Col-0"
+     gene            1..4637
+                     /gene="CCT"
+     regulatory      1..1602
+                     /regulatory_class="promoter"
+                     /gene="CCT"
+     regulatory      1554..1560
+                     /regulatory_class="TATA_box"
+                     /gene="CCT"
+     mRNA            join(1603..1891,2322..2438,2538..2633,2801..2843,
+                     2918..3073,3167..3247,3874..3972,4082..4637)
+                     /gene="CCT"
+                     /product="CTP:phosphocholine cytidylyltransferase"
+     5'UTR           1603..1712
+                     /gene="CCT"
+     CDS             join(1713..1891,2322..2438,2538..2633,2801..2843,
+                     2918..3073,3167..3247,3874..3972,4082..4309)
+                     /gene="CCT"
+                     /EC_number="2.7.7.15"
+                     /codon_start=1
+                     /product="CTP:phosphocholine cytidylyltransferase"
+                     /protein_id="AAD45922.1"
+                     /translation="MSNVIGDRTEDGLSTAAAASGSTAVQSSPPTDRPVRVYADGIYD
+                     LFHFGHARSLEQAKLAFPNNTYLLVGCCNDETTHKYKGRTVMTAEERYESLRHCKWVD
+                     EVIPDAPWVVNQEFLDKHQIDYVAHDSLPYADSSGAGKDVYEFVKKVGRFKETQRTEG
+                     ISTSDIIMRIVKDYNQYVMRNLDRGYSREDLGVSFVKEKRLRVNMRLKKLQERVKEQQ
+                     ERVGEKIQTVKMLRNEWVENADRWVAGFLEIFEEGCHKMGTAIVDSIQERLMRQKSAE
+                     RLENGQDDDTDDQFYEEYFDHDMGSDDDEDEKFYDEEEVKEEETEKTVMTDAKDNK"
+     3'UTR           4310..4637
+                     /gene="CCT"
+ORIGIN      
+        1 ccagaatggt tactatggac atccgccaac catacaagct atggtgaaat gctttatcta
+       61 tctcattttt agtttcaaag cttttgttat aacacatgca aatccatatc cgtaaccaat
+     5341 ctttgttatt atttagagtg attctcacta aatcttaggc ggttagcaac cgccatagtt
+     5401 ttcaaaatct cattctatcg ggattaaatc tgtttttggt gactatatat aaacattggt
+     5461 cgaattttta ggtaagtaaa atcag
+//                                      
