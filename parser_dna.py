@@ -25,10 +25,10 @@ dna_found = re.findall(r'ORIGIN[\s+]+([a-z\s0-9]+)[\s+]//',f.read())
 if dna_found != None:
     dna_seqs = dna_found
     
-    # trim, clean & print records
-    dna_seqs = [re.sub(r'\s+','', dna_seq) for dna_seq in dna_seqs]
-    dna_seqs = [re.sub(r'[0-9]+','', dna_seq) for dna_seq in dna_seqs]
-    print(dna_seqs,end=',')
+# trim, clean & print gene sequences
+dna_seqs = [re.sub(r'\s+','', dna_seq) for dna_seq in dna_seqs]
+dna_seqs = [re.sub(r'[0-9]+','', dna_seq) for dna_seq in dna_seqs]
+print(dna_seqs,end=',')
 print('\n')
 
 '''
