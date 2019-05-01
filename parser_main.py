@@ -9,7 +9,7 @@ Description:
 ------------
 This program takes a text document containing Genbank records and sequentially
 returns the data for each record from various key fields (acc_code, chrom_loc,
-gene_id, prot_name, gene_span, exon_map and start_cod).
+gene_id, prot_name, gene_span, and start_cod).
 
 --------------------------------------------------------------------------------
 '''
@@ -35,7 +35,6 @@ with open('genbank2.txt','rt') as file:
             gene_id = 'NF' 
             prot_name = 'NF'
             gene_span = 'NF'
-            exon_map = 'NF,'
             start_cod = 'NF'
 
             # reset 'data already acquired' flags for new record
@@ -44,7 +43,6 @@ with open('genbank2.txt','rt') as file:
             prod_got = False
             sour_got = False
             CDS_got = False
-            join_got = False
             star_got = False
 
         # detect & record specific data types 
@@ -67,13 +65,6 @@ with open('genbank2.txt','rt') as file:
             if map_found != None:
                 map_got = True
                 chrom_loc = map_found.group(1)
-                
-        if join_got == False:
-            join_flag = re.compile('[\s]+CDS[\s]+(join\()([0-9].+)')
-            join_found = re.match(join_flag,line)
-            if join_found != None:
-                join_got = True
-                exon_map = join_found.group(2)
                 
         # CDS flag reports CDS present, & ensures appropriate data recorded
         if CDS_got == False:
@@ -116,7 +107,6 @@ with open('genbank2.txt','rt') as file:
                 print(gene_id,end=',')
                 print(prot_name,end=',')
                 print(gene_span,end=',')
-                print(exon_map,end='')
                 print(start_cod,end=',') 
                 print('\n','NEXT ',end='')
 print('\n')
@@ -127,13 +117,10 @@ print('\n')
  KNOWN ISSUES
 ---------------
 
-1. Join instructions limited to one line
-2. Some join instructions are not selected despite being present in the
-Genbank record.
-3. Should report just the base span if no alternative splicing results
-4. complement(location)
-5. If more than one source key need to join them 
-6. Maybe find mRNA limits (3' and 5' UTRs mRNA positions)or use actual 3' and 5'UTR 
+1. Some join instructions not selected
+2. Report base span if no join instructions
+3. complement(location)
+4. If more than one source key need to join them
 --------------------------------------------------------------------------------
 
 '''  

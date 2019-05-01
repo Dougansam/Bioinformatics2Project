@@ -21,7 +21,7 @@ import re
 
 # detect & record gene sequences
 f = open('genbank2.txt','r')
-dna_found = re.findall(r'ORIGIN[\s*]+([a-z\s0-9]+)[\s*]//',f.read())
+dna_found = re.findall(r'ORIGIN[\s+]+([a-z\s0-9]+)[\s+]//',f.read())
 if dna_found != None:
     dna_seqs = dna_found
     
