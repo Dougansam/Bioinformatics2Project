@@ -35,10 +35,12 @@ with open('genbank2.txt','rt') as file:
             gene_id = 'NF' 
             prot_name = 'NF'
             locus_span = 'NF'
+            gene_span = 'NF'
             start_cod = 'NF'
 
             # reset 'data already acquired' flags for new record
             map_got = False
+            span_got = False
             gene_got = False
             prod_got = False
             sour_got = False
@@ -65,10 +67,17 @@ with open('genbank2.txt','rt') as file:
             if map_found != None:
                 map_got = True
                 chrom_loc = map_found.group(1)
+            
+        if span_got == False:
+            span_flag = re.compile('[\s]+gene[\s]+(([0-9]+..)([0-9]+))')
+            span_found = re.match(span_flag,line)
+            if span_found != None:
+                span_got = True
+                gene_span = span_found.group(1)                
                 
         # CDS flag reports CDS present, & ensures appropriate data recorded
         if CDS_got == False:
-            CDS_flag = re.compile('[\s]+CDS[\s]+')
+            CDS_flag = re.compile('[gene_\s]+CDS[\s]+')
             CDS_found = re.match(CDS_flag,line)
             if CDS_found != None:
                 CDS_got = True                
@@ -107,6 +116,7 @@ with open('genbank2.txt','rt') as file:
                 print(gene_id,end=',')
                 print(prot_name,end=',')
                 print(locus_span,end=',')
+                print(gene_span,end=',')
                 print(start_cod,end=',') 
                 print('\n','NEXT ',end='')
 print('\n')
