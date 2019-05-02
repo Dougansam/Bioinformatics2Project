@@ -34,7 +34,7 @@ with open('genbank2.txt','rt') as file:
             chrom_loc = 'NF'
             gene_id = 'NF' 
             prot_name = 'NF'
-            gene_span = 'NF'
+            locus_span = 'NF'
             start_cod = 'NF'
 
             # reset 'data already acquired' flags for new record
@@ -57,7 +57,7 @@ with open('genbank2.txt','rt') as file:
             sour_found = re.match(sour_flag,line)
             if sour_found != None:
                 sour_got = True
-                gene_span = sour_found.group(1)
+                locus_span = sour_found.group(1)
 
         if map_got == False:  
             map_flag = re.compile('[\s]+/map="(.+)"')
@@ -106,7 +106,7 @@ with open('genbank2.txt','rt') as file:
                 print(chrom_loc,end=',')
                 print(gene_id,end=',')
                 print(prot_name,end=',')
-                print(gene_span,end=',')
+                print(locus_span,end=',')
                 print(start_cod,end=',') 
                 print('\n','NEXT ',end='')
 print('\n')
