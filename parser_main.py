@@ -140,13 +140,9 @@ print('\n')
 ---------------
 
 1. Some join instructions not selected
-2. Report base span if no join instructions
-3. complement(location)
-4. If more than one source key need to join them
+2. Report CDS_span if no CDS_map instructions
+3. complement(location) records need doing
+
 --------------------------------------------------------------------------------
-        if CDS_got == False:
-            CDS_flag = re.compile('[gene_\s]+CDS[\s]+')
-            CDS_found = re.match(CDS_flag,line)
-            if CDS_found != None:
-                CDS_got = True
+
 '''  

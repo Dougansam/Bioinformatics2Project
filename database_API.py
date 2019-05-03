@@ -63,7 +63,8 @@ def db_request(db_input, db_query, db_output):
                         ['U19568']]
         elif db_output == 6:
             # data_CDS_map
-            db_result = [['179..5187,6619..7050'],['start=1'],['D00596']]
+            db_result = [['179..5187,6619..7050'],['start=1'],['24..8876'],\
+                         ['D00596']]
         elif db_output == 7:
             # data_list_short
             db_result = [['D00596'],['18q24'],['TPMT'],['desmoglein type 1']]
@@ -72,7 +73,7 @@ def db_request(db_input, db_query, db_output):
             db_result = [['U11424'],['18q11.2'],['DSG1'],\
                         ['desmoglein type 1'],\
                         ['caccttctactatgacctgagggttgctacatcacccaccac'],\
-                        ['3..18','20..25'],['start=3']]
+                        ['179..5187,6619..7050'],['start=3'],['24..8876']]
         return db_result
 
     # data for non-unique string searches
@@ -103,7 +104,7 @@ def db_request(db_input, db_query, db_output):
             elif db_output == 6:
                 # data_CDS_maps
                 db_result = [['179..5187,6619..7050'],\
-                ['start=2'],['AF485254']]
+                ['start=2'],['24..8876'],['AF485254']]
             elif db_output == 7:
                 # data_lists_short
                 db_result = [['D00596','U11424'],\
@@ -116,8 +117,8 @@ def db_request(db_input, db_query, db_output):
                 ['desmoglein type 1','desmoglein 4 preproprotein'],\
                 ['cacccacatataacccaatgtatttataatttgtcgtgtcgatcacccaccac',\
                 'tcttagaaggtatcttagcgtcattttctactacctatatataacaatgacaac'],\
-                ['99..987,6619..7050','20..125,300..490'],\
-                ['start=1','start=3']]
+                ['99..187,300..490,6619..7050','159..1187,1200..5079'],\
+                ['start=1','start=3'],['22..7953','103,6012']]
             return db_result
     
     # data for browsing input categories 
@@ -161,6 +162,8 @@ def db_request(db_input, db_query, db_output):
                 '99..587,619..1150','111..183,8360..8395, 11591..11746',\
                 '159..1187,1200..5079','8360..8395,9912..10043'],
                 ['start=1','start=1','start=2','start=1','start=3','start=1'],\
+                ['22..7953','103,6012','21..1234',\
+                '32..13123','55..6023','8099..11034'],
                 ['AF485251','U49845','U19576','U55184','AF165912','AJ001716']]]
             elif db_input == 7:      
                 # data_lists_short
@@ -188,7 +191,8 @@ def db_request(db_input, db_query, db_output):
                 ['179..5187,6619..7050','NF','99..587,619..1150',\
                 '111..183,8360..8395,11591..11746','159..1187,1200..5079',\
                 '8360..8395,9912..10043'],['start=1','start=1','start=2',\
-                'start=1','start=3','start=1']]]  
+                'start=1','start=3','start=1'],['22..7953','103,6012',\
+                '21..1234','32..13123','55..6023','8099..11034']]]  
 
         # data for browsing additional output categories
         if db_output == 1:
@@ -228,6 +232,8 @@ def db_request(db_input, db_query, db_output):
                 '99..587,619..1150','111..183,8360..8395, 11591..11746',\
                 '159..1187,1200..5079','8360..8395,9912..10043'],
                 ['start=1','start=1','start=2','start=1','start=3','start=1'],\
+                ['22..7953','103,6012','21..1234',\
+                '32..13123','55..6023','8099..11034'],         
                 ['AF485251','U49845','U19576','U55184','AF165912','AJ001716']]
         elif db_output  == 7:      
             # data_lists_short
@@ -254,8 +260,10 @@ def db_request(db_input, db_query, db_output):
                 'tatatccaggatatattttgctttgtcgatcacttacctaatattaaactgatgccat'],\
                 ['179..5187,6619..7050','NF','99..587,619..1150',\
                 '111..183,8360..8395,11591..11746','159..1187,1200..5079',\
-                '8360..8395,9912..10043'],['start=1','start=1','start=2',\
-                'start=1','start=3','start=1']]
+                '8360..8395,9912..10043'],\
+                ['start=1','start=1','start=2','start=1','start=3','start=1'],
+                ['22..7953','103,6012','21..1234',\
+                '32..13123','55..6023','8099..11034']]
             
         db_input_result.append(db_result)
         db_result = db_input_result 
