@@ -46,7 +46,7 @@ def db_request(db_input, db_query, db_output):
     if db_query != 'B' and db_input == 1:
         
         if db_output == 1: 
-            # data_acc_code
+            # data_acc_num
             db_result = [['AF485254'],['AF485254']]
         elif db_output == 2:
             # data_chrom_loc
@@ -58,11 +58,11 @@ def db_request(db_input, db_query, db_output):
             # data_prot_name
             db_result = [['desmoglein type 1'],['AJ001716']]
         elif db_output == 5:
-            # data_gene_seq
+            # data_locus_seq
             db_result = [['gtaagtatcttagcgtcattttctactatgacctgagggttgctac'],\
                         ['U19568']]
         elif db_output == 6:
-            # data_exon_map
+            # data_CDS_map
             db_result = [['179..5187,6619..7050'],['start=1'],['D00596']]
         elif db_output == 7:
             # data_list_short
@@ -96,12 +96,12 @@ def db_request(db_input, db_query, db_output):
                 [['desmoglein type 1','desmoglein 4 preproprotein'],\
                 ['AF485254','U49845']]
             elif db_output == 5:
-                # data_gene_seqs
+                # data_locus_seqs
                 db_result = \
                 [['gtaagtatcttagcgtcattttctactatgacctgagggttgctac'],\
                 ['AF485254']]
             elif db_output == 6:
-                # data_exon_maps
+                # data_CDS_maps
                 db_result = [['179..5187,6619..7050'],\
                 ['start=2'],['AF485254']]
             elif db_output == 7:
@@ -147,7 +147,7 @@ def db_request(db_input, db_query, db_output):
                 'spalt-like zinc finger protein','ferrochelatase'],\
                 ['AF485251','U49845','U19576','U55184','AF165912','AJ001716']]]
             elif db_input == 5:
-                # list_gene_seqs
+                # list_locus_seqs
                 db_input_result = [[['cacccacataacatataacatattcgtaacctcacacc',\
                 'tcttagaaggtatcttagcgtcattttctactacctatatataatgggtttgactaaac',\
                 'aggactcatacactacacatacacatataacatatttcttttattaacatgtatttctt',\
@@ -156,7 +156,7 @@ def db_request(db_input, db_query, db_output):
                 'tatatccaggatatattttgctttgtcgatcacttacctaatattaaactgatgccat'],\
                 ['AF485251','U49845','U19576','U55184','AF165912','AJ001716']]]
             elif db_input == 6:
-                # list_exon_maps
+                # list_CDS_maps
                 db_input_result = [[['179..5187,6619..7050','NF',\
                 '99..587,619..1150','111..183,8360..8395, 11591..11746',\
                 '159..1187,1200..5079','8360..8395,9912..10043'],
@@ -214,7 +214,7 @@ def db_request(db_input, db_query, db_output):
                 'spalt-like zinc finger protein','ferrochelatase'],\
                 ['AF485251','U49845','U19576','U55184','AF165912','AJ001716']]
         elif db_output == 5:
-            # list_gene_seqs
+            # list_locus_seqs
             db_result = [['cacccacataacatataacatattcgtaacctcacacc',\
                 'tcttagaaggtatcttagcgtcattttctactacctatatataatgggtttgactaaac',\
                 'aggactcatacactacacatacacatataacatatttcttttattaacatgtatttctt',\
@@ -223,7 +223,7 @@ def db_request(db_input, db_query, db_output):
                 'tatatccaggatatattttgctttgtcgatcacttacctaatattaaactgatgccat'],\
                 ['AF485251','U49845','U19576','U55184','AF165912','AJ001716']]
         elif db_output == 6:
-            # list_exon_maps
+            # list_CDS_maps
             db_result = [['179..5187,6619..7050','NF',\
                 '99..587,619..1150','111..183,8360..8395, 11591..11746',\
                 '159..1187,1200..5079','8360..8395,9912..10043'],

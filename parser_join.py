@@ -24,24 +24,24 @@ import re
 f = open('genbank2.txt','r')
 join_found = re.findall(r'ACCESSION[\s]+[A-Z]+[0-9]+.+?FEATURES.+?[\s]+CDS*[\s]*[join]*[\(]*([0-9\s.,]*)',f.read(),re.S)
 if join_found != None:
-    exon_maps = join_found
+    CDS_maps = join_found
 
 # trim, clean & print join instructions
-exon_maps = [re.sub(r'\s+','', exon_map) for exon_map in exon_maps]
-print(exon_maps,end=',')
+CDS_maps = [re.sub(r'\s+','', CDS_map) for CDS_map in CDS_maps]
+print(CDS_maps,end=',')
 print('\n')
 
 # detect, record & print appropriate acc nos 
 f = open('genbank2.txt','r')
 join_found_acc = re.findall(r'ACCESSION[\s]+([A-Z]+[0-9]+).+?FEATURES.+?[\s]+CDS*[\s]*[join]*[\(]*[0-9\s.,]*',f.read(),re.S)
 if join_found_acc != None:
-    exon_maps_acc = join_found_acc
-    print(exon_maps_acc,end=',')
+    CDS_maps_acc = join_found_acc
+    print(CDS_maps_acc,end=',')
 print('\n')
 
 # combine join instructions & print
-exon_maps = exon_maps + exon_maps_acc
-print(exon_maps,end=',')
+CDS_maps = CDS_maps + CDS_maps_acc
+print(CDS_maps,end=',')
 print('\n')
 
 '''

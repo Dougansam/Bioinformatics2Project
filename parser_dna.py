@@ -19,16 +19,16 @@ complete DNA sequence taken from each record.
 
 import re
 
-# detect & record gene sequences
+# detect & record locus DNA sequences
 f = open('genbank2.txt','r')
-dna_found = re.findall(r'ORIGIN[\s+]+([a-z\s0-9]+)[\s+]//',f.read())
-if dna_found != None:
-    dna_seqs = dna_found
+orig_found = re.findall(r'ORIGIN[\s+]+([a-z\s0-9]+)[\s+]//',f.read())
+if orig_found != None:
+    locus_seqs = orig_found
     
-# trim, clean & print gene sequences
-dna_seqs = [re.sub(r'\s+','', dna_seq) for dna_seq in dna_seqs]
-dna_seqs = [re.sub(r'[0-9]+','', dna_seq) for dna_seq in dna_seqs]
-print(dna_seqs,end=',')
+# trim, clean & print locus DNA sequences
+locus_seqs = [re.sub(r'\s+','', locus_seq) for locus_seq in locus_seqs]
+locus_seqs = [re.sub(r'[0-9]+','', locus_seq) for locus_seq in locus_seqs]
+print(locus_seqs,end=',')
 print('\n')
 
 '''
