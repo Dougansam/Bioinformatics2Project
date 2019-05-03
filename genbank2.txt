@@ -1,8 +1,3 @@
-
-Test records (11)
-
-
-
 LOCUS       SCU49845     5028 bp    DNA             PLN       21-JUN-1999
 DEFINITION  Saccharomyces cerevisiae TCP1-beta gene, partial cds, and Axl2p
             (AXL2) and Rev7p (REV7) genes, complete cds.
@@ -1108,4 +1103,61 @@ ORIGIN
      5341 ctttgttatt atttagagtg attctcacta aatcttaggc ggttagcaac cgccatagtt
      5401 ttcaaaatct cattctatcg ggattaaatc tgtttttggt gactatatat aaacattggt
      5461 cgaattttta ggtaagtaaa atcag
-//                                      
+//
+
+LOCUS       AB045122                3365 bp    DNA     linear   PRI 12-APR-2001
+DEFINITION  Homo sapiens ME2 gene, partial cds.
+ACCESSION   AB045122
+VERSION     AB045122.1  GI:13603415
+KEYWORDS    .
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1
+  AUTHORS   Yanaihara,N., Kohno,T., Takakura,S., Takei,K., Otsuka,A.,
+            Sunaga,N., Takahashi,M., Yamazaki,M., Tashiro,H., Fukuzumi,Y.,
+            Fujimori,Y., Hagiwara,K., Tanaka,T. and Yokota,J.
+  TITLE     Physical and transcriptional map of a 311-kb segment of chromosome
+            18q21, a candidate lung tumor suppressor locus
+  JOURNAL   Genomics 72 (2), 169-179 (2001)
+   PUBMED   11401430
+REFERENCE   2  (bases 1 to 3365)
+  AUTHORS   Kohno,T., Yokota,J., Kohno,T., Takakura,S., Yanaihara,N. and
+            Ohtsuka,A.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (22-JUN-2000) Takashi Kohno, National Cancer Center
+            Research Institute, Biology Division; 1-1, Tsukiji 5 chome,
+            Chuo-ku, Tokyo 104-0045, Japan (E-mail:tkkohno@gan2.res.ncc.go.jp,
+            Tel:81-3-3542-2511(ex.4652), Fax:81-3-3542-0807)
+FEATURES             Location/Qualifiers
+     source          1..3365
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="18"
+                     /map="18q21"
+     gene            <741..>874
+                     /gene="ME2"
+     CDS             <741..>874
+                     /gene="ME2"
+                     /codon_start=1
+                     /product="ME2"
+                     /protein_id="BAB40980.1"
+                     /db_xref="GI:13603416"
+                     /translation="GMAFTLQERQMLGLQGLLPPKIETQDIQALRFHRNLKKMTSPLE
+                     "
+     exon            741..874
+                     /gene="ME2"
+                     /number=3
+ORIGIN      
+        1 gttgcttact gaaatccagc catttttcct gaataactgc tccctgattg ctgcatttct
+       61 ttggtaaatt tccagaatgt tgaagaagtt gcttctggtt atttgtccag tgttcttgtt
+      121 gcttttatgg aggaaaagat tttccaaagg ccttgctcca gcattttcat tgacattgct
+      181 ttgatacgaa gaatttaacc catagtcaaa tgccagaaat tgaaaaagat tttcttatga
+      241 catagattaa ttttttctta agcatcattt cttctatccc cttttaatgg tatttcatgg
+     3241 tttccataga aaaaatgaaa tgtaacactg attcaggctt ggagtttgct gggctggcaa
+     3301 aggcaggtgt tacataaatt cattcagtta atattcagga ctgctaatgt gcctggcatt
+     3361 gttct
+//                                     
