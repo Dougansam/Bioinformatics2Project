@@ -1,1 +1,0 @@
-hope:~-101> mysql -u tg001 -p"f29z70k#r" tg001
