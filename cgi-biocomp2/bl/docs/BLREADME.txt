@@ -1,4 +1,4 @@
-Basic API (Needs improvement all brackets are going to be deleted or improved on just for us now)
+Business Layer API
 
 Function: retrieve_basic
 Input: search string (user input + radio selection)
@@ -33,7 +33,7 @@ Function: any_coding_re
 Input: search string (user input + radio selection)
 Output: string of dna with  <indicating the start and > indicating the end characters outlining the coding regions.
 Restriction enzyme binding sites are highlighted in the same string diffrently depending on the enzyme as seen below.
-Echo R1: Start: £ End: $
+Echo R1: Start: Â£ End: $
 BamH1: Start: % End: ^
 MLuL: Start: & End: *
 BsuM1: Start: ( End: )
