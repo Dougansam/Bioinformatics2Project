@@ -21,9 +21,8 @@ Description:
 ------------
 
 This program takes a text document containing Genbank records and sequentially
-returns the data for all records from various key fields. (Fields are: acc_code,
-chrom_loc, gene_id, prot_name, gene_span, exon_map, start_cod and complete DNA
-sequence.)
+returns the data for all records from the cds join(...) field and the accession
+number field.
 
 """
 #================================================================================
