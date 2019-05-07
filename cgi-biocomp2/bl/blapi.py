@@ -54,11 +54,12 @@ def any_coding_re(radio, query):
     #is inserted to close > the coding region. the second is then stored as
     #the start location for the next slice to move through the code.
     #finally the remaining code after the last slice is added to complete the
-    #sequence and is joined into a string.
+    #sequence and is joined into a string. -1 to
+    #account for the way the comptuer treats postition 1 as 0
     lastslice = 0
     for i in range(0, len(intronlocations), 2):
-        intronsliceone = int(intronlocations[i])
-        intronslicetwo = int(intronlocations[i+1])
+        intronsliceone = int(intronlocations[i])-1
+        intronslicetwo = int(intronlocations[i+1])-1
         finalseq.append(startseq[lastslice:intronsliceone] + "<")
         finalseq.append(startseq[intronsliceone:intronslicetwo] + ">")
         lastslice = intronslicetwo
@@ -156,10 +157,11 @@ def coding_regions(radio ,query):
     #is inserted to close > the coding region. the second is then stored as
     #the start location for the next slice to move through the code.
     #finally the remaining code after the last slice is added to complete the
-    #sequence and is joined into a string.
+    #sequence and is joined into a string. -1 to
+    #account for the way the comptuer treats postition 1 as 0
     for i in range(0, len(intronlocations), 2):
-        intronsliceone = int(intronlocations[i])
-        intronslicetwo = int(intronlocations[i+1])
+        intronsliceone = int(intronlocations[i])-1
+        intronslicetwo = int(intronlocations[i+1])-1
         finalseq.append(startseq[lastslice:intronsliceone] + "<")
         finalseq.append(startseq[intronsliceone:intronslicetwo] + ">")
         lastslice = intronslicetwo
@@ -218,11 +220,12 @@ def coding_seq(radio, query):
     #regexing out just the numbers from the introns section to allow for
     #splicing
     intronlocations = re.findall(r'\d+', introns)
-    #splicing of the sequence and saving the splices into finalseq
+    #splicing of the sequence and saving the splices into finalseq -1 to
+    #account for the way the comptuer treats postition 1 as 0
     finalseq = []
     for i in range(0, len(intronlocations), 2):
-        intronsliceone = int(intronlocations[i])
-        intronslicetwo = int(intronlocations[i+1])
+        intronsliceone = int(intronlocations[i])-1
+        intronslicetwo = int(intronlocations[i+1])-1
         finalseq.append(seq[intronsliceone:intronslicetwo])
     finalseq = "".join(finalseq)
     return finalseq
@@ -271,11 +274,12 @@ def codon_freq_gene(radio, query):
     #regexing out just the numbers from the introns section to allow for
     #splicing
     intronlocations = re.findall(r'\d+', introns)
-    #splicing of the sequence and saving the splices into finalseq
+    #splicing of the sequence and saving the splices into finalseq -1 to
+    #account for the way the comptuer treats postition 1 as 0
     finalseq = []
     for i in range(0, len(intronlocations), 2):
-        intronsliceone = int(intronlocations[i])
-        intronslicetwo = int(intronlocations[i+1])
+        intronsliceone = int(intronlocations[i])-1
+        intronslicetwo = int(intronlocations[i+1])-1
         finalseq.append(seq[intronsliceone:intronslicetwo])
     finalseq = "".join(finalseq)
     
@@ -338,10 +342,11 @@ def protein_seq(radio, query):
     #splicing
     intronlocations = re.findall(r'\d+', introns)
     finalseq = []
-    #splicing of the sequence and saving the splices into finalseq
+    #splicing of the sequence and saving the splices into finalseq -1 to
+    #account for the way the comptuer treats postition 1 as 0
     for i in range(0, len(intronlocations), 2):
-        intronsliceone = int(intronlocations[i])
-        intronslicetwo = int(intronlocations[i+1])
+        intronsliceone = int(intronlocations[i])-1
+        intronslicetwo = int(intronlocations[i+1])-1
         finalseq.append(seq[intronsliceone:intronslicetwo])
     finalseq = "".join(finalseq)
     print(finalseq)
@@ -450,5 +455,3 @@ def show_known_re():
    return re
 
 #*******************************************************************************
-
-
