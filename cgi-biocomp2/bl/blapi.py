@@ -138,6 +138,8 @@ def coding_regions(radio ,query):
     
     #deleting entrys from the start to align reading frame in these senarios
     #these values will not ever be read
+    if juststartingframe is "1":
+        startseq = seq
     if juststartingframe is "2":
         startseq = seq[1:]
     if juststartingframe is "3":
@@ -197,7 +199,6 @@ def coding_seq(radio, query):
     #this value is used in the databse to identify the data needed
     wanted = 8
     code= dbapi.db_request(radio, query, wanted)
-    
     #the information comes back in a list below seperates this list into
     #varables that are easy to use
     seq = "".join(code[4])
@@ -207,6 +208,8 @@ def coding_seq(radio, query):
     
     #deleting entrys from the start to align reading frame in these senarios
     #these values will not ever be read
+    if juststartingframe is "1":
+        seq = seq
     if juststartingframe is "2":
         seq = seq[1:]
     if juststartingframe is "3":
@@ -258,6 +261,8 @@ def codon_freq_gene(radio, query):
     
     #deleting entrys from the start to align reading frame in these senarios
     #these values will not ever be read
+    if juststartingframe is "1":
+        seq = seq
     if juststartingframe is "2":
         seq = seq[1:]
     if juststartingframe is "3":
@@ -317,11 +322,13 @@ def protein_seq(radio, query):
     #varables that are easy to use
     seq = "".join(code[4])
     introns = "".join(code[5])
-    start = "".join(code[7])
+    start = "".join(code[6])
     juststartingframe = start[6]
     
     #deleting entrys from the start to align reading frame in these senarios
     #these values will not ever be read
+    if juststartingframe is "1":
+        seq = seq
     if juststartingframe is "2":
         seq = seq[1:]
     if juststartingframe is "3":
@@ -337,7 +344,7 @@ def protein_seq(radio, query):
         intronslicetwo = int(intronlocations[i+1])
         finalseq.append(seq[intronsliceone:intronslicetwo])
     finalseq = "".join(finalseq)
-    
+    print(finalseq)
     #Going through the finalseq in threes and assigning a one letter
     #amino acid code to the codon given. this moves through the whole
     #finalseq variable returning the full set at the end as a string.
@@ -443,4 +450,5 @@ def show_known_re():
    return re
 
 #*******************************************************************************
+
 
