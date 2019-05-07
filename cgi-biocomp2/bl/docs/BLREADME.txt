@@ -1,4 +1,4 @@
-Business Layer API
+Business Layer API by Sam Dougan
 
 Function: retrieve_basic
 Input: search string (user input + radio selection)
