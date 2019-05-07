@@ -1,4 +1,13 @@
 import re
+
+   '''
+   program that takes chrom_CDS_18 file as the input and outputs a dictionary containing
+   the frequency of all the codons in the DNA stored in the file. This is stored as the
+   codon as the key and the frequency as the value. the key 'total' is the total number
+   of codons stored in the dictionary.
+   
+   Written by Sam Dougan
+   '''
 #parser to remove the DNA stored in the ORIGIN section of the genebank records
 
 f= open("chrom_CDS_18","r")
