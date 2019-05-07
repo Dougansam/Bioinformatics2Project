@@ -4,7 +4,13 @@ import re
    program that takes chrom_CDS_18 file as the input and outputs a dictionary containing
    the frequency of all the codons in the DNA stored in the file. This is stored as the
    codon as the key and the frequency as the value. the key 'total' is the total number
-   of codons stored in the dictionary.
+   of codons stored in the dictionary. This is stored in a function instead of being called
+   directly in the api due to the size of the data and its static nature.
+   
+   to run ensure you have the chrom_CDS_18 file as downloaded from 
+   http://www.bioinf.org.uk/teaching/bbk/biocomp2/project/page04.html
+   in the same directiory as this program. This program will generate a file storing the DNA code
+   as a seperate text file. Which is then used to count the codons.
    
    Written by Sam Dougan
    '''
