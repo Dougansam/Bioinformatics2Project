@@ -23,6 +23,7 @@ def any_coding_re(radio, query):
         radio = 3
     if radio == "gene_product":
         radio = 4
+        
     #this value is used in the databse to identify the data needed
     wanted = 8
     code= db_request(radio, query, wanted)
@@ -30,6 +31,7 @@ def any_coding_re(radio, query):
     introns = "".join(code[5])
     start = "".join(code[6])
     juststartingframe = start[6]
+
     #deleting entrys from the start to align reading frame in these senarios
     #these values will not ever be read
     if juststartingframe is "1":
@@ -38,10 +40,12 @@ def any_coding_re(radio, query):
         startseq = seq[1:]
     if juststartingframe is "3":
         startseq = seq[2:]
+        
     #regexing out just the numbers from the introns section to allow for
     #splicing
     intronlocations = re.findall(r'\d+', introns)
     finalseq = []
+    
     #Moving through the numbers stored in intronlocations as twos
     #the first is used to insert the opening < symbol then the second
     #is inserted to close > the coding region. the second is then stored as
@@ -57,11 +61,13 @@ def any_coding_re(radio, query):
         lastslice = intronslicetwo
     finalseq.append(startseq[intronslicetwo:])
     finalseq = "".join(finalseq)
+    
     #if the first base was removed the first base is readded to the sequence
     if juststartingframe is "2":
         finalseq = "".join(seq[:1] + finalseq)
     if juststartingframe is "3":
         finalseq = "".join(seq[:2] + finalseq)
+        
     #for each selected restriction enzyme regex is used to identify the pattern
     #if a match is found in the sequence then the span of the match is stored
     #this span is used to cut out the match and replaced in the string with
@@ -112,25 +118,30 @@ def coding_regions(radio ,query):
         radio = 3
     if radio == "gene_product":
         radio = 4
+        
     #this value is used in the databse to identify the data needed
     wanted = 8
     code= db_request(radio ,query, wanted)
+    
     #the information comes back in a list below seperates this list into
     #varables that are easy to use
     seq = "".join(code[4])
     introns = "".join(code[5])
     start = "".join(code[6])
     juststartingframe = start[6]
+    
     #deleting entrys from the start to align reading frame in these senarios
     #these values will not ever be read
     if juststartingframe is "2":
         startseq = seq[1:]
     if juststartingframe is "3":
         startseq = seq[2:]
+        
     #regexing out just the numbers from the introns section to allow for
     #splicing
     intronlocations = re.findall(r'\d+', introns)
     finalseq = []
+    
     lastslice = 0
     #Moving through the numbers stored in intronlocations as twos
     #the first is used to insert the opening < symbol then the second
@@ -147,6 +158,7 @@ def coding_regions(radio ,query):
     finalseq.append(startseq[intronslicetwo:])
     finalseq = "".join(finalseq)
     #if the first base was removed the first base is readded to the sequence
+    
     if juststartingframe is "2":
         finalseq = "".join(seq[:1] + finalseq)
     if juststartingframe is "3":
@@ -172,21 +184,25 @@ def coding_seq(radio, query):
         radio = 3
     if radio == "gene_product":
         radio = 4
+        
     #this value is used in the databse to identify the data needed
     wanted = 8
     code= db_request(radio, query, wanted)
+    
     #the information comes back in a list below seperates this list into
     #varables that are easy to use
     seq = "".join(code[4])
     introns = "".join(code[5])
     start = "".join(code[6])
     juststartingframe = start[6]
+    
     #deleting entrys from the start to align reading frame in these senarios
     #these values will not ever be read
     if juststartingframe is "2":
         seq = seq[1:]
     if juststartingframe is "3":
         seq = seq[2:]
+        
     #regexing out just the numbers from the introns section to allow for
     #splicing
     intronlocations = re.findall(r'\d+', introns)
@@ -221,18 +237,21 @@ def codon_freq_gene(radio, query):
     #this value is used in the databse to identify the data needed
     wanted = 8
     code= db_request(radio, query, wanted)
+    
     #the information comes back in a list below seperates this list into
     #varables that are easy to use
     seq = "".join(code[4])
     introns = "".join(code[5])
     start = "".join(code[6])
     juststartingframe = start[6]
+    
     #deleting entrys from the start to align reading frame in these senarios
     #these values will not ever be read
     if juststartingframe is "2":
         seq = seq[1:]
     if juststartingframe is "3":
         seq = seq[2:]
+        
     #regexing out just the numbers from the introns section to allow for
     #splicing
     intronlocations = re.findall(r'\d+', introns)
@@ -243,6 +262,7 @@ def codon_freq_gene(radio, query):
         intronslicetwo = int(intronlocations[i+1])
         finalseq.append(seq[intronsliceone:intronslicetwo])
     finalseq = "".join(finalseq)
+    
     #joining finalseq to a string and going through the string in threes
     #if the codons are unique they are added as a new key in the
     #dictionary if not 1 is added to the value. In both cases 1 is added
@@ -277,18 +297,21 @@ def protein_seq(radio, query):
     #this value is used in the databse to identify the data needed
     wanted = 8
     code= db_request(radio, query, wanted)
+    
     #the information comes back in a list below seperates this list into
     #varables that are easy to use
     seq = "".join(code[4])
     introns = "".join(code[5])
     start = "".join(code[7])
     juststartingframe = start[6]
+    
     #deleting entrys from the start to align reading frame in these senarios
     #these values will not ever be read
     if juststartingframe is "2":
         seq = seq[1:]
     if juststartingframe is "3":
         seq = seq[2:]
+        
     #regexing out just the numbers from the introns section to allow for
     #splicing
     intronlocations = re.findall(r'\d+', introns)
@@ -299,6 +322,7 @@ def protein_seq(radio, query):
         intronslicetwo = int(intronlocations[i+1])
         finalseq.append(seq[intronsliceone:intronslicetwo])
     finalseq = "".join(finalseq)
+    
     #Going through the finalseq in threes and assigning a one letter
     #amino acid code to the codon given. this moves through the whole
     #finalseq variable returning the full set at the end as a string.
