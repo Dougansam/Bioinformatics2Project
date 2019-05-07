@@ -5,14 +5,17 @@ import dbapi
 
 #All written by Sam Dougan
 #*******************************************************************************
-#restriction enzyme biding site function. Takes in query and radio from
-#front end and searches database for results. handles the data returned
-#and produces a string of dna. Coding regions marked by <> characters.
-#EchoR1 binding sites outlined by £$. BamH1 marked by %^, Mlul marked by
-#&* and finally BsuM1 marked by ().
-
          
 def any_coding_re(radio, query):
+
+    '''
+    restriction enzyme biding site function. Takes in query and radio from
+    front end and searches database for results. handles the data returned
+    and produces a string of dna. Coding regions marked by <> characters.
+    EchoR1 binding sites outlined by £$. BamH1 marked by %^, Mlul marked by
+    &* and finally BsuM1 marked by ().
+    '''
+    
     aa = []
     #the radios are converted to the int value reconised by the database
     if radio == "accession":
@@ -101,13 +104,16 @@ def any_coding_re(radio, query):
 
 #*******************************************************************************
 
-#Coding region highlighter. This function takes in a query and the radio
-#information from the front end and sends this to the database layer.
-#the output is seperated and used to highlight areas of coding regions
-#in the DNA stored in the database. This is highlighted using <> symbols
-#around the coding regions to be highlighed in the HTML
-
 def coding_regions(radio ,query):
+
+    '''
+    Coding region highlighter. This function takes in a query and the radio
+    information from the front end and sends this to the database layer.
+    the output is seperated and used to highlight areas of coding regions
+    in the DNA stored in the database. This is highlighted using <> symbols
+    around the coding regions to be highlighed in the HTML
+    '''
+    
     coding = []
     #the radios are converted to the int value reconised by the database
     if radio == "accession":
@@ -167,13 +173,16 @@ def coding_regions(radio ,query):
 
 #*******************************************************************************
 
-#This function splices out the coding sequence rather than just highlighting.
-#this sequence will align with the protein coding sequence. The function takes
-#A radio and a query to be passed to the database which returns information
-#needed to locate the coding sequence. The output is a string of DNA code
-#that will code for the protein.
-
 def coding_seq(radio, query):
+
+    '''
+    This function splices out the coding sequence rather than just highlighting.
+    this sequence will align with the protein coding sequence. The function takes
+    A radio and a query to be passed to the database which returns information
+    needed to locate the coding sequence. The output is a string of DNA code
+    that will code for the protein.
+    '''
+    
     coding = []
     #the radios are converted to the int value reconised by the database
     if radio == "accession":
@@ -217,13 +226,15 @@ def coding_seq(radio, query):
 
 #*******************************************************************************
 
-#This function is a codon frequency caculator. It takes in information on the
-#radio selected and the stringquery from the front end and packages this for
-#the database layer. It cuts the code given back into coding sequence and counts
-#the codons in the sequence as well as a total. This is stored in a dictionary
-#and passed back to the front layer.
-
 def codon_freq_gene(radio, query):
+
+    '''
+    This function is a codon frequency caculator. It takes in information on the
+    radio selected and the stringquery from the front end and packages this for
+    the database layer. It cuts the code given back into coding sequence and counts
+    the codons in the sequence as well as a total. This is stored in a dictionary
+    and passed back to the front layer.
+    '''
     codon_freq = {'total':0}
     #the radios are converted to the int value reconised by the database
     if radio == "accession":
@@ -279,11 +290,15 @@ def codon_freq_gene(radio, query):
 
 #*******************************************************************************
 
-#main translating def takes in a search string and outputs the produced protein
-#code from the DNA found in the search "query" is the users input. radio is the
-#type of data used to search such as assession code to be passed down to the db
-#the output is single amino acid codes with X being a stop codon.
 def protein_seq(radio, query):
+
+    '''
+    main translating def takes in a search string and outputs the produced protein
+    code from the DNA found in the search "query" is the users input. radio is the
+    type of data used to search such as assession code to be passed down to the db
+    the output is single amino acid codes with X being a stop codon.
+    '''
+    
     aa = []
     #the radios are converted to the int value reconised by the database
     if radio == "accession":
@@ -374,12 +389,15 @@ def protein_seq(radio, query):
 
 #*******************************************************************************
 
-#this function is called through a button in the HTML. it passes a request
-#to the database to return the "basic" information stored on all entrys in
-#the database: Accession number, gene identifier, location and product.
-#this is then displayed on the webpage.
-
 def retrieve_all():
+
+    '''
+    this function is called through a button in the HTML. it passes a request
+    to the database to return the "basic" information stored on all entrys in
+    the database: Accession number, gene identifier, location and product.
+    this is then displayed on the webpage.
+    '''
+    
     #this input uses the browse feature of the base layer to return all
     #stored information
     info = db_request(7, 'B', 7)
@@ -387,14 +405,17 @@ def retrieve_all():
 
 #*******************************************************************************
 
-#This function takes a radio and string query from the front end. This calls the
-#database layer inputting the type of data searched on as well as the search
-#it returns the base information on the query and multiple if the search is
-#not unique. The basic information is: Accession number, gene identifier,
-#location and product. If the search is not unique the front end will ask for
-#clarification
-
 def retrieve_basic(radio, query):
+
+    '''
+    This function takes a radio and string query from the front end. This calls the
+    database layer inputting the type of data searched on as well as the search
+    it returns the base information on the query and multiple if the search is
+    not unique. The basic information is: Accession number, gene identifier,
+    location and product. If the search is not unique the front end will ask for
+    clarification
+    '''
+    
     #the radios are converted to the int value reconised by the database
     if radio == "accession":
         radio = 1
@@ -411,15 +432,15 @@ def retrieve_basic(radio, query):
 
 #*******************************************************************************
 
-#This function returns a simple string showing what restriction enzymes are
-#supported by the any_coding_re function.
-
 def show_known_re():
+
+   '''
+   This function returns a simple string showing what restriction enzymes are
+   supported by the any_coding_re function.
+   '''
+   
    re = "The four RE's able to be checked for are EchoR1, BamH1, BsuM1 and Mlul"
    return re
 
 #*******************************************************************************
-
-
-
 
