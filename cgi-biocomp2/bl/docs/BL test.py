@@ -18,3 +18,6 @@ if __name__ == "__main__":
     print (blapi.retrieve_basic(radio, typed))
     print (blapi.show_known_re())
     print (blapi.whole_chrom_codons())
+
+    
+#written by Sam Dougan
