@@ -18,3 +18,5 @@ frequencys.
 
 'total' is the total codons counted by the program and each codon has been given a number of times it appears
 in the whole genome.
+
+written by Sam Dougan
