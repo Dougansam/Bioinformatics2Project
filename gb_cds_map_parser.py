@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
+"""
+Program:    
+File:       
+Version:    V1.0
+Date:       07.05.19
+Author:     Dr Georgina R Toye 
+Address:    Department of Biological Sciences
+            School of Science
+            Birkbeck College
+            University of London
+           
+-------------------------------------------------------------------------------
 
-'''
 ================================================================================
 **************************
 * GENBANK CDS MAP PARSER *
@@ -14,7 +25,7 @@ returns the data for all records from various key fields. (Fields are: acc_code,
 chrom_loc, gene_id, prot_name, gene_span, exon_map, start_cod and complete DNA
 sequence.)
 
-'''
+"""
 #================================================================================
 #***************#   
 # MAIN PROGRAM  #

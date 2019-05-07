@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
+"""
+Program:    
+File:       
+Version:    V1.0
+Date:       07.05.19
+Author:     Dr Georgina R Toye 
+Address:    Department of Biological Sciences
+            School of Science
+            Birkbeck College
+            University of London
+           
 
-'''
 ================================================================================
 ****************************
 * GENBANK LOCUS DNA PARSER *
@@ -13,7 +23,7 @@ This program takes a text document containing Genbank records (genbank.txt),
 and returns the entire DNA sequence of the locus as a series of MySQL entry
 statements. The accession number is also included.
 
-'''
+"""
 #================================================================================
 #***************#   
 # MAIN PROGRAM  #
