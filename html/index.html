@@ -1,0 +1,75 @@
+<!--HTML code of the index of the gene browser
+Author: Diego Chillón Pino-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chrom18</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  </head>
+  <body>
+    <div class="w3-display-container w3-animate-opacity">
+      <img class="w3-opacity-max" src="microarray.jpg" alt="Microarray">
+      <h1 class="w3-padding w3-display-topleft w3-fjalla w3-text-deep-orange">Chrom18</h1>
+      <h2 class="w3-padding w3-display-bottomleft w3-hide-small w3-text-white">Gene browser of the 18<sup>th</sup> chromosome in the 21<sup>st</sup> century</h2>
+      <img class="logo w3-image w3-display-right w3-hide-medium w3-hide-small" src="logo.svg" alt="Logo">
+    </div>
+
+<!--Form with radio buttons and input text box-->
+    <section class="w3-section w3-container">
+      <form autocomplete="off" action="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/cd002/step.py" method="get">
+        <h3>Search gene</h3>
+        Search by identifier:
+        <div class="w3-container">
+          <input class="w3-radio" type="radio" id="accession" name="radio" value="accession" checked>
+          <label for="accession">Genbank accession</label>
+        </div>
+        <div class="w3-container">
+          <input class="w3-radio" type="radio" id="gene_id" name="radio" value="gene_id">
+          <label for="gene_id">Gene ID</label>
+        </div>
+        <div class="w3-container">
+          <input class="w3-radio" type="radio" id="gene_product" name="radio" value="gene_product">
+          <label for="gene_product">Gene product</label>
+        </div>
+        <div class="w3-container">
+          <input class="w3-radio" type="radio" id="chr_location" name="radio" value="chr_location">
+          <label for="chr_location">Chromosomal location</label>
+        </div>
+        <br>
+        <div class="autocomplete">
+          <input id="myInput" type="text" name="query" placeholder="Your query" style="width:400px">
+          <button class="w3-button w3-green w3-round" type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <hr>
+
+<!--Get a table of all entries-->
+    <section class="w3-section w3-container">
+      <form action="http://student.cryst.bbk.ac.uk/cgi-bin/cgiwrap/cd002/listall.py" method="get">
+        <h3>Summary list</h3>
+        You can also display a table containing all the genes in the database by clicking on the following button:
+        <button class="w3-button w3-green w3-round" type="submit">See all entries</button>
+      </form>
+    </section>
+
+    <hr>
+
+<!--Credits-->
+    <section class="w3-section w3-container">
+      <h3>Credits</h3>
+      <p>Web front end developed by Diego Chillón Pino</p>
+      <p>Logo made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+    </section>
+
+<!--JavaScript for autocompleting the text input-->
+    <script src="autocomplete.js"></script>
+
+  </body>
+</html>
+
