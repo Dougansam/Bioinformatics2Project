@@ -29,7 +29,7 @@ def any_coding_re(radio, query):
         
     #this value is used in the databse to identify the data needed
     wanted = 8
-    code= db_request(radio, query, wanted)
+    code= dbapi.db_request(radio, query, wanted)
     seq = "".join(code[4])
     introns = "".join(code[5])
     start = "".join(code[6])
@@ -127,7 +127,7 @@ def coding_regions(radio ,query):
         
     #this value is used in the databse to identify the data needed
     wanted = 8
-    code= db_request(radio ,query, wanted)
+    code= dbapi.db_request(radio ,query, wanted)
     
     #the information comes back in a list below seperates this list into
     #varables that are easy to use
@@ -196,7 +196,7 @@ def coding_seq(radio, query):
         
     #this value is used in the databse to identify the data needed
     wanted = 8
-    code= db_request(radio, query, wanted)
+    code= dbapi.db_request(radio, query, wanted)
     
     #the information comes back in a list below seperates this list into
     #varables that are easy to use
@@ -247,7 +247,7 @@ def codon_freq_gene(radio, query):
         radio = 4
     #this value is used in the databse to identify the data needed
     wanted = 8
-    code= db_request(radio, query, wanted)
+    code= dbapi.db_request(radio, query, wanted)
     
     #the information comes back in a list below seperates this list into
     #varables that are easy to use
@@ -311,7 +311,7 @@ def protein_seq(radio, query):
         radio = 4
     #this value is used in the databse to identify the data needed
     wanted = 8
-    code= db_request(radio, query, wanted)
+    code= dbapi.db_request(radio, query, wanted)
     
     #the information comes back in a list below seperates this list into
     #varables that are easy to use
@@ -400,7 +400,7 @@ def retrieve_all():
     
     #this input uses the browse feature of the base layer to return all
     #stored information
-    info = db_request(7, 'B', 7)
+    info = dbapi.db_request(7, 'B', 7)
     return info
 
 #*******************************************************************************
@@ -427,7 +427,7 @@ def retrieve_basic(radio, query):
         radio = 4
     #this value is used in the databse to identify the data needed
     wanted = 7
-    result = db_request(radio, query, wanted)
+    result = dbapi.db_request(radio, query, wanted)
     return result
 
 #*******************************************************************************
