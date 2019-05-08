@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-'''
+'''OLD VERSION INCLUDED FOR USE WITH BL - GRToye
 ---------------
  DATABASE API 
 ---------------
