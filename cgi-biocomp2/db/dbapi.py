@@ -1,9 +1,28 @@
 #!/usr/bin/env python3
 
-'''OLD VERSION INCLUDED FOR USE WITH BL - GRToye
----------------
- DATABASE API 
----------------
+"""
+-------------------------------------------------------------------------------- 
+NB: This program is essentially identical to the dummy_db_api program.
+ 
+It has been included in place of a working version of the database API, simply
+because the BL layer refers to "dbapi" in anticipation of a working program.
+ 
+ - GRToye
+--------------------------------------------------------------------------------
+
+Program:    
+File:       
+Version:    V1.0
+Date:       07.05.19
+Author:     Dr Georgina R Toye 
+Address:    Department of Biological Sciences
+            School of Science
+            Birkbeck College
+            University of London
+
+-------------------
+ DUMMY DATABASE API 
+-------------------
             
 Description:
 ------------
