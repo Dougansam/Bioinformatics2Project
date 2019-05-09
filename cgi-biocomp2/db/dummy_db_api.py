@@ -20,13 +20,14 @@ Description:
 ------------
 
 1. String searches:
-The program takes a 'search' data field descriptor, a search
-string, and an 'output' data field/s descriptor. It returns data from requested
-output field/s for any matching record/s.
+The program takes a 'search' data field descriptor (1 -4), a search string, and
+an 'output' data field/s descriptor (1-8). It returns data from requested output
+field/s for any matching record/s.
+
 2. Browse requests:
-The program takes a 'browse' data field descriptor, a 'browse data field'
-request, and an 'additional output' data field/s descriptor. It returns data
-for ALL records from stipulated browse fields AND, where different,
+The program takes a 'browse' data field descriptor (1-8), a 'browse data field/s'
+request string 'B', and an 'additional output' data field/s descriptor. It returns
+data for ALL records from stipulated browse fields AND, where different,
 stipulated output field/s.
 
 ================================================================================
@@ -58,7 +59,7 @@ def db_request(db_input, db_query, db_output):
         
         if db_output == 1: 
             # data_acc_num
-            db_result = [['AF485254'],['AF485254']]
+            db_result = [['AF485254']]
         elif db_output == 2:
             # data_chrom_loc
             db_result = [['18q24.3'],['U55184']]
@@ -93,8 +94,7 @@ def db_request(db_input, db_query, db_output):
                 
             if db_output == 1: 
                 # data_acc_codes
-                db_result = [['AF485254'],['AF485254'],\
-                            ['AF485254'],['AF485254']]
+                db_result = [['AF485254','AF485254','Z27420']]
             elif db_output == 2:
                 # data_chrom_locs
                 db_result = [['18q24.3','18q24'],['AF485254','U49845']]
@@ -139,7 +139,6 @@ def db_request(db_input, db_query, db_output):
             if db_input == 1:
                 # list_acc_codes
                 db_input_result = [[['AF485251','U49845','U19576', 'U55184',\
-                'AF165912','AJ001716'],['AF485251','U49845','U19576', 'U55184',\
                 'AF165912','AJ001716']]]
             elif db_input == 2:
                 # list_chrom_locs
@@ -209,7 +208,6 @@ def db_request(db_input, db_query, db_output):
         if db_output == 1:
             # list_acc_codes
             db_result = [['AF485251','U49845','U19576','U55184','AF165912',\
-            'AJ001716'],['AF485251','U49845','U19576', 'U55184','AF165912',\
             'AJ001716']]    
         elif db_output == 2:
              # list_chrom_locs
@@ -323,6 +321,9 @@ print("Database request results:",db_result)
 ---------------
 
 1. Need to convert to automatic rather than manual entry of parameters.
+2. Some options given in this dummy program will not be available in the
+final db_api due to excessive size of the output records e.g it will not be
+possible to browse all DNA sequence records.
 
 --------------------------------------------------------------------------------
 
