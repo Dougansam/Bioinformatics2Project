@@ -41,7 +41,7 @@ gene_spans = []
 CDS_spans = []
 start_cods = []
 
-with open('genbank2.txt','rt') as file:
+with open('genbank.txt','rt') as file:
     for line in file:
 
         # register start of new record, & count records
@@ -189,7 +189,7 @@ import re
 
 # detect & record accession numbers
 acc_nums = []
-with open('genbank2.txt','rt') as myfile:
+with open('genbank.txt','rt') as myfile:
     for line in myfile:   
         acc_flag = re.compile('ACCESSION[\s]+([A-Z]+[0-9]+)[\s]+')
         acc_found = re.match(acc_flag,line)
@@ -231,7 +231,7 @@ import re
 
 # detect & record accession numbers
 acc_nums = []
-with open('genbank2.txt','rt') as myfile:
+with open('genbank.txt','rt') as myfile:
     for line in myfile:   
         acc_flag = re.compile('ACCESSION[\s]+([A-Z]+[0-9]+)[\s]+')
         acc_found = re.match(acc_flag,line)
