@@ -21,8 +21,9 @@ Description:
 This program takes a text document containing Genbank records and sequentially
 returns the data for each record from various key fields. Main program returns
 the following: acc_code, chrom_loc, gene_id, prot_name, gene_span, and start_cod).
-Functions below return locus_seq and CDS_map data.
-The data is output as a series of MySQL entry statements.
+Subprograms below return locus_seq and CDS_map data.
+The data is output as a series of MySQL entry statements to populate the table
+gb_main
 
 """
 #================================================================================
@@ -169,18 +170,19 @@ print('\n')
 '''
 
 #================================================================================
-#**************************  
-# CDS MAP PARSER FUNCTION *
-#**************************
+#*****************
+# CDS MAP PARSER *
+#*****************
 
 Description:
 ------------
 
-This program takes a text document containing Genbank records and sequentially
+This subprogram takes a text document containing Genbank records and sequentially
 returns the data for all records from the cds join(...) field and the accession
 number field.
 
-The data is output as a series of MySQL entry statements.
+The data is output as a series of MySQL entry statements to populate the table
+gb_cds_map
 
 #================================================================================
 '''
@@ -199,7 +201,7 @@ with open('genbank.txt','rt') as myfile:
 print('\n')
 
 # record, trim & print join instructions
-f = open('genbank2.txt','r')
+f = open('genbank.txt','r')
 join_found = re.findall(r'ACCESSION[\s]+[A-Z]+[0-9]+.+?FEATURES.+?[\s]+CDS*[\s]*[join]*[\(]*([0-9\s.,]*)',f.read(),re.S)
 if join_found != None:
     cds_maps = join_found
@@ -214,17 +216,18 @@ for gb_cds_map in gb_cds_maps:
 
 """
 #================================================================================
-#****************************
-# LOCUS DNA PARSER FUNCTION *
-#****************************
+#*******************
+# LOCUS DNA PARSER *
+#*******************
 Description:
 ------------
 
-This program takes a text document containing Genbank records (genbank.txt),
+This subprogram takes a text document containing Genbank records (genbank.txt),
 and returns the entire DNA sequence of the locus as a series of MySQL entry
 statements. The accession number is also included.
 
-The data is output as a series of MySQL entry statements.
+The data is output as a series of MySQL entry statementsto populate the table
+gb_seq
 ================================================================================
 """
 import re
@@ -241,7 +244,7 @@ with open('genbank.txt','rt') as myfile:
 print('\n')
 
 # record, trim & print DNA sequences
-f = open('genbank2.txt','r')
+f = open('genbank.txt','r')
 orig_found = re.findall(r'ORIGIN[\s+]+([a-z\s0-9]+)[\s+]//',f.read())
 if orig_found != None:
     locus_seqs = orig_found
